@@ -19,7 +19,7 @@ $(document).ready(function () {
     cover: true,
     transition: ['fade', 'zoomOut', 'swirlLeft'],
     slides: [
-      {src: '/dist/images/h03.jpg'}
+      {src: '/skin/newskin/frontend/dist/images/h03.jpg'}
     ]
   });
 

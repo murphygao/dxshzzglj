@@ -281,7 +281,6 @@ header {
     float: left;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     color: #2399ff; }
     header .main .left h1 {
@@ -293,7 +292,6 @@ header {
     float: right;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
     header .main .right .item a {
       font-size: 14.4px;
@@ -417,7 +415,6 @@ nav {
       float: left;
       position: relative;
       top: 50%;
-      -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
       padding-right: 10px; }
       .slideBox .owl-dots .owl-dot span {
@@ -551,15 +548,15 @@ footer {
         left: 0;
         bottom: 0; }
     .banshifuwu .box-bd .hd ul li.menu-a {
-      background: url("/dist/images/bsgz.png") no-repeat; }
+      background: url("/skin/newskin/frontend/dist/images/bsgz.png") no-repeat; }
       .banshifuwu .box-bd .hd ul li.menu-a span {
         background: darkgreen; }
     .banshifuwu .box-bd .hd ul li.menu-b {
-      background: url("/dist/images/zcfg.png") no-repeat; }
+      background: url("/skin/newskin/frontend/dist/images/zcfg.png") no-repeat; }
       .banshifuwu .box-bd .hd ul li.menu-b span {
         background: #2e6da4; }
     .banshifuwu .box-bd .hd ul li.menu-c {
-      background: url("/dist/images/bgxz.png") no-repeat; }
+      background: url("/skin/newskin/frontend/dist/images/bgxz.png") no-repeat; }
       .banshifuwu .box-bd .hd ul li.menu-c span {
         background: darkorange; }
     .banshifuwu .box-bd .hd ul li.on {

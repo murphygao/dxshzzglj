@@ -1,0 +1,103 @@
+# 帝国cms目录结构介绍
+
+### 系统根目录(/)
+- d/  附件和数据存放目录 (data)
+    - file/  附件存放目录
+    - js/    JS调用生成目录
+    - txt/   内容存文本存放目录
+- e/ 系统程序目录 (empire)
+    - html/  自定义内容页存放预设目录
+    - images/    默认模板图片目录
+    - s/ 专题目录 (special)
+    - search/     高级搜索页面目录
+    - skin/  模板CSS和图片存放目录
+    - testdata/  内置测试数据的附件目录 (安装时选择测试数据用的，不内置测试数据可以删除)
+    
+    
+### /e/ 系统程序目录
+- action/  信息动态列表页和内容页目录
+- admin/  后台目录 (可重命名)
+- class/ 系统核心文件目录
+- data/ 系统处理数据相关目录 (临时文件、缓存等)
+- DoInfo/ 前台会员管理信息目录 (页面模板e/template/DoInfo)
+- DoPrint/  打印页面目录
+- DownSys/ 下载系统模型功能目录 (页面模板e/template/DownSys)
+- enews/  前台处理数据入口文件
+- extend/  扩展程序目录
+- ftp/  FTP识别目录
+- install/ 安装程序目录，安装后请删除掉
+- member/ 前台会员功能目录 (页面模板e/template/member)
+- message/  提示信息页面目录
+- NewsSys/  新闻系统模型功能目录
+- payapi/ 在线支付接口目录 (页面模板e/template/payapi)
+- pl/ 评论页目录
+- public/ 公用功能程序目录 (页面模板e/template/public)
+- sch/ 全站全文搜索生成目录
+- search/ 普通搜索文件目录
+- ShopSys/ 商城系统模型功能目录 (页面模板e/template/ShopSys)
+- ShowKey/ 前台验证码文件目录
+- space/ 会员空间目录 (其中template为会员空间模板目录)
+- tags/ TAGS列表文件目录
+- tasks/ 计划任务脚本存放目录
+- template/ 前台动态页的模板目录
+- tool/  插件相关功能目录 (页面模板e/template/tool)
+- update/ 升级程序目录 (升级程序复制到这个目录运行)
+- ViewImg/ 显示图片大图目录
+- wap/ WAP功能目录 (其中template为WAP模板目录)
+- web/ RSS显示文件目录
+
+### /e/template/ 动态页面模板目录
+- DoInfo/ 前台投稿模板目录 (对应程序目录：/e/DoInfo/)
+    - AddInfo.php  发布投稿页面模板 (对应程序文件：/e/DoInfo/AddInfo.php)
+    - ChangeClass.php       发布投稿选择栏目页面模板 (对应程序文件：/e/DoInfo/ChangeClass.php)
+    - DoInfo.php            管理投稿首页页面模板 (对应程序文件：/e/DoInfo/index.php)
+    - tran.php              发布投稿上传附件页面模板 (对应程序文件：/e/DoInfo/tran.php)
+- DownSys/  下载模型页面模板目录 (对应程序目录：/e/DownSys/)
+    - report.php            提交错误报告页面模板 (对应程序文件：/e/report/index.php)
+- member/ 会员中心模板目录 (对应程序目录：/e/member/)
+    - memberlist/           会员列表页面模板目录 (对应程序文件：/e/member/list/index.php)
+    - mspace/               管理会员空间页面模板目录 (对应程序目录：/e/member/mspace/)
+        - ChangeStyle.php 选择空间模板页面模板 (对应程序文件：/e/member/mspace/ChangeStyle.php)
+        - feedback.php 管理会员空间反馈页面模板 (对应程序文件：/e/member/mspace/feedback.php)
+        - gbook.php           管理会员空间留言页面模板 (对应程序文件：/e/member/mspace/gbook.php)
+        - ReGbook.php 管理会员空间留言回复页面模板 (对应程序文件：/e/member/mspace/ReGbook.php)
+        - SetSpace.php        设置会员空间页面模板 (对应程序文件：/e/member/mspace/SetSpace.php)
+        - ShowFeedback.php 管理会员空间反馈显示反馈页面模板(对应程序文件：/e/member/mspace/ShowFeedback.php)
+    - AddFava.php           增加收藏页面模板 (对应程序文件：/e/member/fava/add/index.php)
+    - AddFriend.php         增加好友页面模板 (对应程序文件：/e/member/friend/add/index.php)
+    - AddMsg.php 发送站内信息页面模板 (对应程序文件：/e/member/msg/AddMsg/index.php)
+    - buybak.php            购买记录页面模板 (对应程序文件：/e/member/buybak/index.php)
+    - buygroup.php          购买充值类型页面模板 (对应程序文件：/e/member/buygroup/index.php)
+    - card.php              点卡充值页面模板 (对应程序文件：/e/member/card/index.php)
+    - ChangeFriend.php 选择好友页面模板(对应程序文件：/e/member/friend/FriendClass/index.php)
+    - ChangeRegister.php 选择注册会员组页面模板(对应程序文件：/e/member/register/ChangeRegister.php)
+    - cp.php                会员中心首页页面模板 (对应程序文件：/e/member/cp/index.php)
+    - downbak.php           消费记录页面模板 (对应程序文件：/e/member/downbak/index.php)
+    - EditInfo.php          修改资料页面模板 (对应程序文件：/e/member/EditInfo/index.php)
+    - EditSafeInfo.php 修改安全资料页面模板 (对应程序文件：/e/member/EditInfo/EditSafeInfo.php)
+    - fava.php              管理收藏页面模板 (对应程序文件：/e/member/fava/index.php)
+    - FavaClass.php 管理收藏分类页面模板 (对应程序文件：/e/member/fava/FavaClass/index.php)
+    - friend.php            管理好友页面模板 (对应程序文件：/e/member/friend/index.php)
+    - FriendClass.php 管理好友分类页面模板(对应程序文件：/e/member/friend/FriendClass/index.php)
+    - getpass.php 取回密码重置页面模板 (对应程序文件：/e/member/GetPassword/getpass.php)
+    - GetPassword.php 取回密码页面模板 (对应程序文件：/e/member/GetPassword/index.php)
+    - login.php             会员登录页面模板 (对应程序文件：/e/member/login/index.php)
+    - loginopen.php 弹出页面提示重新登陆页面模板 (对应程序文件：/e/member/login/login.php)
+    - msg.php               管理站内信息页面模板 (对应程序文件：/e/member/msg/index.php)
+    - my.php                我的状态页面模板 (对应程序文件：/e/member/my/index.php)
+    - register.php          会员注册页面模板 (对应程序文件：/e/member/register/index.php)
+    - regsend.php 注册激活帐号页面模板 (对应程序文件：/e/member/register/regsend.php)
+    - ShowInfo.php          查看会员资料页面模板 (对应程序文件：/e/member/ShowInfo/index.php)
+    - ViewMsg.php 查看站内信息内容页面模板 (对应程序文件：/e/member/msg/ViewMsg/index.php)
+- payapi/                 在线支付页面模板目录 (对应程序目录：/e/payapi/)
+    - payapi.php            在线支付页面模板 (对应程序文件：/e/payapi/index.php)
+- public/                 公共程序页面模板目录 (对应程序目录：/e/public/)
+    - vote.php              信息投票结果页面模板 (对应程序文件：/e/public/vote/index.php)
+- ShopSys/                商城模型页面模板目录 (对应程序目录：/e/ShopSys/)
+    - buycar.php            购物车页面模板 (对应程序文件：/e/ShopSys/buycar/index.php)
+    - ListDd.php            管理商城订单页面模板 (对应程序文件：/e/ShopSys/ListDd/index.php)
+    - order.php             订单提交表单页面模板 (对应程序文件：/e/ShopSys/order/index.php)
+    - ShowDd.php 查看商城订单内容页面模板 (对应程序文件：/e/ShopSys/ShowDd/index.php)
+    - SubmitOrder.php 订单提交最终确认页面模板 (对应程序文件：/e/ShopSys/SubmitOrder/index.php)
+- tool/                   内置插件模板目录 (对应程序目录：/e/tool/)
+- vote.php             投票插件结果页面模板 (对应程序文件：/e/tool/vote/index.php)

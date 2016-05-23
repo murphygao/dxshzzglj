@@ -12,11 +12,11 @@ $ecms_config['db']['dbver']='5.0';	//数据库版本
 $ecms_config['db']['dbserver']='localhost';	//数据库登录地址
 $ecms_config['db']['dbport']='';	//端口，不填为按默认
 $ecms_config['db']['dbusername']='root';	//数据库用户名
-$ecms_config['db']['dbpassword']='';	//数据库密码
-$ecms_config['db']['dbname']='empirecms';	//数据库名
+$ecms_config['db']['dbpassword']='123456Poi';	//数据库密码
+$ecms_config['db']['dbname']='dxshzzglj';	//数据库名
 $ecms_config['db']['setchar']='utf8';	//设置默认编码
 $ecms_config['db']['dbchar']='utf8';	//数据库默认编码
-$ecms_config['db']['dbtbpre']='phome_';	//数据表前缀
+$ecms_config['db']['dbtbpre']='dxshzzglj_';	//数据表前缀
 $dbtbpre=$ecms_config['db']['dbtbpre'];	//数据表前缀
 $ecms_config['db']['showerror']=1;	//显示SQL错误提示(0为不显示,1为显示)
 
@@ -83,7 +83,7 @@ $ecms_config['memberf']['userkey']='userkey';//用户密钥字段
 
 //后台安全设置
 $ecms_config['esafe']['loginauth']='root';	//登录认证码,如果设置登录需要输入此认证码才能通过
-$ecms_config['esafe']['ecookiernd']='0ozfOCz88M22CMeb3zivWqEPYXzTX2';	//后台登录COOKIE认证码(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['esafe']['ecookiernd']='12jmzmDEdgShu5O2c6d6ujbzGyWYDb';	//后台登录COOKIE认证码(填写10~50个任意字符，最好多种字符组合)
 $ecms_config['esafe']['ckhloginip']=0;	//后台是否验证登录IP,0为不验证,1为验证
 $ecms_config['esafe']['ckhsession']=0;	//后台是否启用SESSION验证,0为不验证,1为验证
 $ecms_config['esafe']['ckhanytime']=0;	//后台随时认证码变更周期,单位:秒(0为不启用)
@@ -95,10 +95,10 @@ $ecms_config['esafe']['ckhash']=0;	//启用后台来源认证码,0为金刚模�
 //COOKIE设置
 $ecms_config['cks']['ckdomain']='';		//cookie作用域
 $ecms_config['cks']['ckpath']='/';		//cookie作用路径
-$ecms_config['cks']['ckvarpre']='ylkwf';		//前台cookie变量前缀
-$ecms_config['cks']['ckadminvarpre']='yfhpb';		//后台cookie变量前缀
-$ecms_config['cks']['ckrnd']='NArZ1UNlQKBAqLNqtS8rmzMkpGhpGF';	//COOKIE验证随机码(填写10~50个任意字符，最好多种字符组合)
-$ecms_config['cks']['ckrndtwo']='ygiFOcWnZjTJAndlVM73dwOAWsBWIh';	//COOKIE验证随机码2(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['cks']['ckvarpre']='bwwnx';		//前台cookie变量前缀
+$ecms_config['cks']['ckadminvarpre']='rmgck';		//后台cookie变量前缀
+$ecms_config['cks']['ckrnd']='BjEKEksRVqKYTDcRU3PzjwLujjzTDN';	//COOKIE验证随机码(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['cks']['ckrndtwo']='c40CLR6sf82Op5uEi8hFCyZETYZWJ6';	//COOKIE验证随机码2(填写10~50个任意字符，最好多种字符组合)
 
 //网站防火墙配置
 $ecms_config['fw']['eopen']=0;	//开启防火墙(0为关闭,1为开启)
@@ -127,7 +127,7 @@ $ecms_config['sets']['realplayertype']=',.rm,.ra,.rmvb,.mp4,.mov,.avi,.wav,.ram,
 //-------EmpireCMS.Public.Cache-------
 
 //------------e_public
-$public_r=array('sitename'=>'帝国网站管理系统',
+$public_r=array('sitename'=>'定西社会组织管理局',
 'newsurl'=>'/',
 'filetype'=>'|.gif|.jpg|.swf|.rar|.zip|.mp3|.wmv|.txt|.doc|',
 'filesize'=>2048,
@@ -158,12 +158,12 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'loadtempnum'=>50,
 'bakdbpath'=>'bdata',
 'bakdbzip'=>'zip',
-'downpass'=>'zBeRf5SoOo6pyDV0I88L',
+'downpass'=>'',
 'filechmod'=>1,
 'loginkey_ok'=>0,
 'tbname'=>'news',
 'limittype'=>0,
-'redodown'=>1,
+'redodown'=>0,
 'downsofttemp'=>'[ <a href=\"#ecms\" onclick=\"window.open(\'[!--down.url--]\',\'\',\'width=300,height=300,resizable=yes\');\">[!--down.name--]</a> ]',
 'onlinemovietemp'=>'[ <a href=\"#ecms\" onclick=\"window.open(\'[!--down.url--]\',\'\',\'width=300,height=300,resizable=yes\');\">[!--down.name--]</a> ]',
 'lctime'=>1222406370,
@@ -177,12 +177,12 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'qaddtransize'=>50,
 'ebakthisdb'=>1,
 'delnewsnum'=>300,
-'markpos'=>5,
-'markimg'=>'../data/mark/maskdef.gif',
+'markpos'=>0,
+'markimg'=>'',
 'marktext'=>'',
-'markfontsize'=>'5',
+'markfontsize'=>'',
 'markfontcolor'=>'',
-'markfont'=>'../data/mark/cour.ttf',
+'markfont'=>'',
 'adminloginkey'=>1,
 'php_outtime'=>0,
 'listpagefun'=>'sys_ShowListPage',
@@ -204,12 +204,12 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'searchtempvar'=>1,
 'showinfolevel'=>0,
 'navfh'=>'>',
-'spicwidth'=>105,
-'spicheight'=>118,
-'spickill'=>1,
-'jpgquality'=>80,
-'markpct'=>65,
-'redoview'=>24,
+'spicwidth'=>0,
+'spicheight'=>0,
+'spickill'=>0,
+'jpgquality'=>0,
+'markpct'=>0,
+'redoview'=>0,
 'reggetfen'=>0,
 'regbooktime'=>30,
 'revotetime'=>30,
@@ -232,7 +232,7 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'ebakcanlistdb'=>0,
 'keytog'=>2,
 'keytime'=>30,
-'keyrnd'=>'Jisl0XWBkzSm7dte5CsvEXi5JwRFFO',
+'keyrnd'=>'iLBK84aPQc5BKgvrkNjJ1kfhU7D4Oa',
 'checkdorepstr'=>',0,0,0,0,',
 'regkey_ok'=>0,
 'opengetdown'=>0,

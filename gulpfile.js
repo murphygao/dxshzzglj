@@ -21,29 +21,29 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
 var paths = {
-  buildSass: ['build/sass/**/*.scss'],
-  distCssDir: 'dist/css/' + theme,
+  buildSass: ['skin/newskin/frontend/build/sass/**/*.scss'],
+  distCssDir: 'skin/newskin/frontend/dist/css/' + theme,
 
-  buildJsDir: ['build/js/**/*.js'],
-  distJsDir: 'dist/js',
+  buildJsDir: ['skin/newskin/frontend/build/js/**/*.js'],
+  distJsDir: 'skin/newskin/frontend/dist/js',
 
   buildHtmlTemplate: [
-    'build/html-template/index.html',
-    'build/html-template/second-list.html',
-    'build/html-template/third-list.html',
-    'build/html-template/third-list-images.html',
-    'build/html-template/content.html'
+    'skin/newskin/frontend/build/html-template/index.html',
+    'skin/newskin/frontend/build/html-template/second-list.html',
+    'skin/newskin/frontend/build/html-template/third-list.html',
+    'skin/newskin/frontend/build/html-template/third-list-images.html',
+    'skin/newskin/frontend/build/html-template/content.html'
   ],
-  distPagegsDir: 'dist/pages/' + theme,
+  distPagegsDir: 'skin/newskin/frontend/dist/pages/' + theme,
 
   //buildImagesDir: 'build/images/**/*',
   //distImagesDir: 'dist/images',
 
-  buildPluginDir: ['build/plugins/**/*'],
-  distPluginDir: 'dist/plugins',
+  buildPluginDir: ['skin/newskin/frontend/build/plugins/**/*'],
+  distPluginDir: 'skin/newskin/frontend/dist/plugins',
 
-  buildFontsDir: ['build/fonts/**/*'],
-  distFontsDir: 'dist/fonts'
+  buildFontsDir: ['skin/newskin/frontend/build/fonts/**/*'],
+  distFontsDir: 'skin/newskin/frontend/dist/fonts'
 };
 
 // start up a php server at localhost:8888
@@ -155,17 +155,17 @@ gulp.task('sass', ['cleanDistCssDir'], function () {
 // watch
 // watch ./build/sass directory
 gulp.task('watch-sass', function () {
-  gulp.watch('build/sass/**/*.scss', ['sass']);
+  gulp.watch('skin/newskin/frontend/build/sass/**/*.scss', ['sass']);
 });
 
 // watch ./build/template directory
 gulp.task('watch-template', function () {
-  gulp.watch('build/html-template/**/*.html', ['fileinclude']);
+  gulp.watch('skin/newskin/frontend/build/html-template/**/*.html', ['fileinclude']);
 });
 
 // watch ./build/js directory
 gulp.task('watch-js', function () {
-  gulp.watch('build/js/**/*.js', ['js']);
+  gulp.watch('skin/newskin/frontend/build/js/**/*.js', ['js']);
 });
 
 gulp.task('watch', ['php', 'watch-sass', 'watch-js', 'watch-template']);

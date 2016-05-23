@@ -13,7 +13,7 @@ $ecms_config['db']['dbserver']='localhost';	//数据库登录地址
 $ecms_config['db']['dbport']='';	//端口，不填为按默认
 $ecms_config['db']['dbusername']='root';	//数据库用户名
 $ecms_config['db']['dbpassword']='';	//数据库密码
-$ecms_config['db']['dbname']='ecms72';	//数据库名
+$ecms_config['db']['dbname']='empirecms';	//数据库名
 $ecms_config['db']['setchar']='utf8';	//设置默认编码
 $ecms_config['db']['dbchar']='utf8';	//数据库默认编码
 $ecms_config['db']['dbtbpre']='phome_';	//数据表前缀
@@ -82,8 +82,8 @@ $ecms_config['memberf']['userkey']='userkey';//用户密钥字段
 //-------EmpireCMS.Seting.area-------
 
 //后台安全设置
-$ecms_config['esafe']['loginauth']='';	//登录认证码,如果设置登录需要输入此认证码才能通过
-$ecms_config['esafe']['ecookiernd']='www.phome.net';	//后台登录COOKIE认证码(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['esafe']['loginauth']='root';	//登录认证码,如果设置登录需要输入此认证码才能通过
+$ecms_config['esafe']['ecookiernd']='0ozfOCz88M22CMeb3zivWqEPYXzTX2';	//后台登录COOKIE认证码(填写10~50个任意字符，最好多种字符组合)
 $ecms_config['esafe']['ckhloginip']=0;	//后台是否验证登录IP,0为不验证,1为验证
 $ecms_config['esafe']['ckhsession']=0;	//后台是否启用SESSION验证,0为不验证,1为验证
 $ecms_config['esafe']['ckhanytime']=0;	//后台随时认证码变更周期,单位:秒(0为不启用)
@@ -95,10 +95,10 @@ $ecms_config['esafe']['ckhash']=0;	//启用后台来源认证码,0为金刚模�
 //COOKIE设置
 $ecms_config['cks']['ckdomain']='';		//cookie作用域
 $ecms_config['cks']['ckpath']='/';		//cookie作用路径
-$ecms_config['cks']['ckvarpre']='ecms';		//前台cookie变量前缀
-$ecms_config['cks']['ckadminvarpre']='adminecms';		//后台cookie变量前缀
-$ecms_config['cks']['ckrnd']='www.phome.net';	//COOKIE验证随机码(填写10~50个任意字符，最好多种字符组合)
-$ecms_config['cks']['ckrndtwo']='www.phome.net';	//COOKIE验证随机码2(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['cks']['ckvarpre']='ylkwf';		//前台cookie变量前缀
+$ecms_config['cks']['ckadminvarpre']='yfhpb';		//后台cookie变量前缀
+$ecms_config['cks']['ckrnd']='NArZ1UNlQKBAqLNqtS8rmzMkpGhpGF';	//COOKIE验证随机码(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['cks']['ckrndtwo']='ygiFOcWnZjTJAndlVM73dwOAWsBWIh';	//COOKIE验证随机码2(填写10~50个任意字符，最好多种字符组合)
 
 //网站防火墙配置
 $ecms_config['fw']['eopen']=0;	//开启防火墙(0为关闭,1为开启)
@@ -128,7 +128,7 @@ $ecms_config['sets']['realplayertype']=',.rm,.ra,.rmvb,.mp4,.mov,.avi,.wav,.ram,
 
 //------------e_public
 $public_r=array('sitename'=>'帝国网站管理系统',
-'newsurl'=>'/ecms72/',
+'newsurl'=>'/',
 'filetype'=>'|.gif|.jpg|.swf|.rar|.zip|.mp3|.wmv|.txt|.doc|',
 'filesize'=>2048,
 'relistnum'=>8,
@@ -151,14 +151,14 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'exittime'=>40,
 'smalltextlen'=>160,
 'defaultgroupid'=>1,
-'fileurl'=>'/ecms72/d/file/',
+'fileurl'=>'/d/file/',
 'install'=>0,
 'phpmode'=>0,
 'dorepnum'=>300,
 'loadtempnum'=>50,
 'bakdbpath'=>'bdata',
 'bakdbzip'=>'zip',
-'downpass'=>'ZWfUcSHhRGvMfC5Xf4Q9',
+'downpass'=>'zBeRf5SoOo6pyDV0I88L',
 'filechmod'=>1,
 'loginkey_ok'=>0,
 'tbname'=>'news',
@@ -232,14 +232,14 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'ebakcanlistdb'=>0,
 'keytog'=>2,
 'keytime'=>30,
-'keyrnd'=>'AEuFgKy82pL6Zw3YGm582CGCc7DFkn',
+'keyrnd'=>'Jisl0XWBkzSm7dte5CsvEXi5JwRFFO',
 'checkdorepstr'=>',0,0,0,0,',
 'regkey_ok'=>0,
 'opengetdown'=>0,
 'gbkey_ok'=>0,
 'fbkey_ok'=>0,
 'newaddinfotime'=>0,
-'classnavs'=>'<a href=\"/ecms72/news/\">新闻中心</a>&nbsp;|&nbsp;<a href=\"/ecms72/download/\">下载中心</a>&nbsp;|&nbsp;<a href=\"/ecms72/movie/\">影视频道</a>&nbsp;|&nbsp;<a href=\"/ecms72/shop/\">网上商城</a>&nbsp;|&nbsp;<a href=\"/ecms72/flash/\">FLASH频道</a>&nbsp;|&nbsp;<a href=\"/ecms72/photo/\">图片频道</a>&nbsp;|&nbsp;<a href=\"/ecms72/article/\">文章中心</a>&nbsp;|&nbsp;<a href=\"/ecms72/info/\">分类信息</a>',
+'classnavs'=>'',
 'adminstyle'=>',1,2,',
 'docnewsnum'=>300,
 'openschall'=>0,
@@ -294,7 +294,7 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'filedatatbs'=>',1,',
 'filedeftb'=>1,
 'pldeftb'=>1,
-'plurl'=>'/ecms72/e/pl/',
+'plurl'=>'/e/pl/',
 'plkey_ok'=>1,
 'plface'=>'||[~e.jy~]##1.gif||[~e.kq~]##2.gif||[~e.se~]##3.gif||[~e.sq~]##4.gif||[~e.lh~]##5.gif||[~e.ka~]##6.gif||[~e.hh~]##7.gif||[~e.ys~]##8.gif||[~e.ng~]##9.gif||[~e.ot~]##10.gif||',
 'plf'=>'',

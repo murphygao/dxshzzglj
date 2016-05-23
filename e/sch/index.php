@@ -74,8 +74,8 @@ $url="<a href='".ReturnSiteIndexUrl()."'>".$fun_r['index']."</a>&nbsp;>&nbsp;".$
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>搜索 - Powered by EmpireCMS</title>
-<link href="/ecms72/skin/default/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/ecms72/skin/default/js/tabs.js"></script>
+<link href="/skin/default/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/default/js/tabs.js"></script>
 <style type="text/css">
 <!--
 .r {
@@ -99,11 +99,11 @@ margin-top:10px;
 <td width="63%">
 <!-- 登录 -->
 <script>
-document.write('<script src="/ecms72/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
 </script>
 </td>
 <td align="right">
-<a onclick="window.external.addFavorite(location.href,document.title)" href="#ecms">加入收藏</a> | <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('/ecms72/')" href="#ecms">设为首页</a> | <a href="/ecms72/e/member/cp/">会员中心</a> | <a href="/ecms72/e/DoInfo/">我要投稿</a> | <a href="/ecms72/e/web/?type=rss2" target="_blank">RSS<img src="/ecms72/skin/default/images/rss.gif" border="0" hspace="2" /></a>
+<a onclick="window.external.addFavorite(location.href,document.title)" href="#ecms">加入收藏</a> | <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('/')" href="#ecms">设为首页</a> | <a href="/e/member/cp/">会员中心</a> | <a href="/e/DoInfo/">我要投稿</a> | <a href="/e/web/?type=rss2" target="_blank">RSS<img src="/skin/default/images/rss.gif" border="0" hspace="2" /></a>
 </td>
 </tr>
 </table></td>
@@ -111,23 +111,23 @@ document.write('<script src="/ecms72/e/member/login/loginjs.php?t='+Math.random(
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="10">
 <tr valign="middle">
-<td width="240" align="center"><a href="/ecms72/"><img src="/ecms72/skin/default/images/logo.gif" width="200" height="65" border="0" /></a></td>
-<td align="center"><a href="http://www.phome.net/OpenSource/" target="_blank"><img src="/ecms72/skin/default/images/opensource.gif" width="100%" height="70" border="0" /></a></td>
+<td width="240" align="center"><a href="/"><img src="/skin/default/images/logo.gif" width="200" height="65" border="0" /></a></td>
+<td align="center"><a href="http://www.phome.net/OpenSource/" target="_blank"><img src="/skin/default/images/opensource.gif" width="100%" height="70" border="0" /></a></td>
 </tr>
 </table>
 <!-- 导航tab选项卡 -->
 <table width="920" border="0" align="center" cellpadding="0" cellspacing="0" class="nav">
   <tr> 
     <td class="nav_global"><ul>
-        <li class="curr" id="tabnav_btn_0" onmouseover="tabit(this)"><a href="/ecms72/">首页</a></li>
-        <li id="tabnav_btn_1" onmouseover="tabit(this)"><a href="/ecms72/news/">新闻中心</a></li>
-        <li id="tabnav_btn_2" onmouseover="tabit(this)"><a href="/ecms72/download/">下载中心</a></li>
-        <li id="tabnav_btn_3" onmouseover="tabit(this)"><a href="/ecms72/movie/">影视频道</a></li>
-        <li id="tabnav_btn_4" onmouseover="tabit(this)"><a href="/ecms72/shop/">网上商城</a></li>
-        <li id="tabnav_btn_5" onmouseover="tabit(this)"><a href="/ecms72/flash/">FLASH频道</a></li>
-        <li id="tabnav_btn_6" onmouseover="tabit(this)"><a href="/ecms72/photo/">图片频道</a></li>
-        <li id="tabnav_btn_7" onmouseover="tabit(this)"><a href="/ecms72/article/">文章中心</a></li>
-        <li id="tabnav_btn_8" onmouseover="tabit(this)"><a href="/ecms72/info/">分类信息</a></li>
+        <li class="curr" id="tabnav_btn_0" onmouseover="tabit(this)"><a href="/">首页</a></li>
+        <li id="tabnav_btn_1" onmouseover="tabit(this)"><a href="/news/">新闻中心</a></li>
+        <li id="tabnav_btn_2" onmouseover="tabit(this)"><a href="/download/">下载中心</a></li>
+        <li id="tabnav_btn_3" onmouseover="tabit(this)"><a href="/movie/">影视频道</a></li>
+        <li id="tabnav_btn_4" onmouseover="tabit(this)"><a href="/shop/">网上商城</a></li>
+        <li id="tabnav_btn_5" onmouseover="tabit(this)"><a href="/flash/">FLASH频道</a></li>
+        <li id="tabnav_btn_6" onmouseover="tabit(this)"><a href="/photo/">图片频道</a></li>
+        <li id="tabnav_btn_7" onmouseover="tabit(this)"><a href="/article/">文章中心</a></li>
+        <li id="tabnav_btn_8" onmouseover="tabit(this)"><a href="/info/">分类信息</a></li>
       </ul></td>
   </tr>
 </table>
@@ -135,7 +135,7 @@ document.write('<script src="/ecms72/e/member/login/loginjs.php?t='+Math.random(
 	<tr valign="top">
 		<td class="list_content"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="position">
 				<tr>
-					<td>现在的位置：<a href="/ecms72/">首页</a>&nbsp;>&nbsp;搜索</td>
+					<td>现在的位置：<a href="/">首页</a>&nbsp;>&nbsp;搜索</td>
 				</tr>
 			</table>
 			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box">
@@ -222,7 +222,7 @@ $empire=null;
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td align="center" class="search">
-<form action="/ecms72/e/search/index.php" method="post" name="searchform" id="searchform">
+<form action="/e/search/index.php" method="post" name="searchform" id="searchform">
 <table border="0" cellspacing="6" cellpadding="0">
 <tr>
 <td><strong>站内搜索：</strong>
@@ -240,9 +240,9 @@ $empire=null;
 <option value="info">分类信息</option>
 </select>
 </td>
-<td><input type="image" class="inputSub" src="/ecms72/skin/default/images/search.gif" />
+<td><input type="image" class="inputSub" src="/skin/default/images/search.gif" />
 </td>
-<td><a href="/ecms72/search/" target="_blank">高级搜索</a></td>
+<td><a href="/search/" target="_blank">高级搜索</a></td>
 </tr>
 </table>
 </form>
@@ -252,9 +252,9 @@ $empire=null;
 <td>
 	<table width="100%" border="0" cellpadding="0" cellspacing="4" class="copyright">
         <tr> 
-          <td align="center"><a href="/ecms72/">网站首页</a> | <a href="#">关于我们</a> 
+          <td align="center"><a href="/">网站首页</a> | <a href="#">关于我们</a> 
             | <a href="#">服务条款</a> | <a href="#">广告服务</a> | <a href="#">联系我们</a> 
-            | <a href="#">网站地图</a> | <a href="#">免责声明</a> | <a href="/ecms72/e/wap/" target="_blank">WAP</a></td>
+            | <a href="#">网站地图</a> | <a href="#">免责声明</a> | <a href="/e/wap/" target="_blank">WAP</a></td>
         </tr>
         <tr> 
           <td align="center">Powered by <strong><a href="http://www.phome.net" target="_blank">EmpireCMS</a></strong> 

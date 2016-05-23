@@ -12,7 +12,7 @@ if(!defined('InEmpireCMS'))
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td align="center" class="search">
-<form action="/ecms72/e/search/index.php" method="post" name="searchform" id="searchform">
+<form action="/e/search/index.php" method="post" name="searchform" id="searchform">
 <table border="0" cellspacing="6" cellpadding="0">
 <tr>
 <td><strong>站内搜索：</strong>
@@ -30,9 +30,9 @@ if(!defined('InEmpireCMS'))
 <option value="info">分类信息</option>
 </select>
 </td>
-<td><input type="image" class="inputSub" src="/ecms72/skin/default/images/search.gif" />
+<td><input type="image" class="inputSub" src="/skin/default/images/search.gif" />
 </td>
-<td><a href="/ecms72/search/" target="_blank">高级搜索</a></td>
+<td><a href="/search/" target="_blank">高级搜索</a></td>
 </tr>
 </table>
 </form>
@@ -42,9 +42,9 @@ if(!defined('InEmpireCMS'))
 <td>
 	<table width="100%" border="0" cellpadding="0" cellspacing="4" class="copyright">
         <tr> 
-          <td align="center"><a href="/ecms72/">网站首页</a> | <a href="#">关于我们</a> 
+          <td align="center"><a href="/">网站首页</a> | <a href="#">关于我们</a> 
             | <a href="#">服务条款</a> | <a href="#">广告服务</a> | <a href="#">联系我们</a> 
-            | <a href="#">网站地图</a> | <a href="#">免责声明</a> | <a href="/ecms72/e/wap/" target="_blank">WAP</a></td>
+            | <a href="#">网站地图</a> | <a href="#">免责声明</a> | <a href="/e/wap/" target="_blank">WAP</a></td>
         </tr>
         <tr> 
           <td align="center">Powered by <strong><a href="http://www.phome.net" target="_blank">EmpireCMS</a></strong> 

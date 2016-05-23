@@ -33,13 +33,13 @@ h2 { color: #1e3a9e; font-size: 25px; font-weight: bold;  }
 .ecommenttext {clear:left;margin:0;padding:0;}
 -->
 </style>
-<script src="/ecms72/e/data/js/ajax.js"></script>
+<script src="/e/data/js/ajax.js"></script>
 </head>
 
 <body topmargin="0">
 <table width="766" border="0" align="center" cellpadding="3" cellspacing="1">
   <tr>
-    <td width="210"><a href="/ecms72/"><img src="/ecms72/skin/default/images/logo.gif" border="0" /></a></td>
+    <td width="210"><a href="/"><img src="/skin/default/images/logo.gif" border="0" /></a></td>
     <td><h1>网友评论</h1></td>
     <td><div align="right"><a href="#tosaypl"><strong><font color="#FF0000">我也评两句</font></strong></a></div></td>
   </tr>
@@ -131,7 +131,7 @@ while($r=$empire->fetch($sql))
       </table>
       <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
-          <td background="/ecms72/skin/default/images/plhrbg.gif"></td>
+          <td background="/skin/default/images/plhrbg.gif"></td>
         </tr>
       </table>
       
@@ -167,7 +167,7 @@ while($r=$empire->fetch($sql))
             <input name="password" type="password" id="password" size="12" value="<?=$lpassword?>" />
             验证码： 
             <input name="key" type="text" id="key" size="6" />
-              <img src="/ecms72/e/ShowKey/?v=pl" align="middle" name="plKeyImg" id="plKeyImg" onclick="plKeyImg.src='/ecms72/e/ShowKey/?v=pl&t='+Math.random()" title="看不清楚,点击刷新" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ecms72/e/member/register/" target="_blank">还没有注册？</a></td>
+              <img src="/e/ShowKey/?v=pl" align="middle" name="plKeyImg" id="plKeyImg" onclick="plKeyImg.src='/e/ShowKey/?v=pl&t='+Math.random()" title="看不清楚,点击刷新" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/e/member/register/" target="_blank">还没有注册？</a></td>
         </tr>
       </table></td>
   </tr>
@@ -186,7 +186,7 @@ while($r=$empire->fetch($sql))
         </tr>
         <tr> 
           <td><div align="center"> 
-              <script src="/ecms72/d/js/js/plface.js"></script>
+              <script src="/d/js/js/plface.js"></script>
             </div></td>
         </tr>
       </table> </td>
@@ -201,7 +201,7 @@ while($r=$empire->fetch($sql))
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td align="center" class="search">
-<form action="/ecms72/e/search/index.php" method="post" name="searchform" id="searchform">
+<form action="/e/search/index.php" method="post" name="searchform" id="searchform">
 <table border="0" cellspacing="6" cellpadding="0">
 <tr>
 <td><strong>站内搜索：</strong>
@@ -219,9 +219,9 @@ while($r=$empire->fetch($sql))
 <option value="info">分类信息</option>
 </select>
 </td>
-<td><input type="image" class="inputSub" src="/ecms72/skin/default/images/search.gif" />
+<td><input type="image" class="inputSub" src="/skin/default/images/search.gif" />
 </td>
-<td><a href="/ecms72/search/" target="_blank">高级搜索</a></td>
+<td><a href="/search/" target="_blank">高级搜索</a></td>
 </tr>
 </table>
 </form>
@@ -231,9 +231,9 @@ while($r=$empire->fetch($sql))
 <td>
 	<table width="100%" border="0" cellpadding="0" cellspacing="4" class="copyright">
         <tr> 
-          <td align="center"><a href="/ecms72/">网站首页</a> | <a href="#">关于我们</a> 
+          <td align="center"><a href="/">网站首页</a> | <a href="#">关于我们</a> 
             | <a href="#">服务条款</a> | <a href="#">广告服务</a> | <a href="#">联系我们</a> 
-            | <a href="#">网站地图</a> | <a href="#">免责声明</a> | <a href="/ecms72/e/wap/" target="_blank">WAP</a></td>
+            | <a href="#">网站地图</a> | <a href="#">免责声明</a> | <a href="/e/wap/" target="_blank">WAP</a></td>
         </tr>
         <tr> 
           <td align="center">Powered by <strong><a href="http://www.phome.net" target="_blank">EmpireCMS</a></strong> 

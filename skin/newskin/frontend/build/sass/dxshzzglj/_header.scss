@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* header scss */
+header {
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  .main {
+    width: $base_width;
+    margin: 0 auto;
+    height: 150px;
+  }
+
+  .main .left {
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $base_theme_color;
+    h1 {
+      font-size: 2.7*$base_font_size;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.5*$base_font_size;
+    }
+  }
+  .main .right {
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    .item a {
+      font-size: 1.2*$base_font_size;
+      display: inline-block;
+      padding: 2px 8px;
+      text-decoration: none;
+      color: #000;
+      &.active {
+        background: red;
+        color: #fff;
+      }
+    }
+    .search {
+      padding: 5px 0;
+      input[type="search"] {
+        color: #333;
+        font-family: "Microsoft YaHei", Tahoma, Verdana, SimSun;
+        padding: 2px;
+        margin: 0;
+        width: 220px;
+        font-size: 1.2*$base_font_size;
+        outline-width: medium;
+        outline-style: none;
+        outline-color: invert;
+        text-shadow: 0 1px 2px #fff;
+        border: 1px solid #ccc;
+        &:focus {
+          border: 1px solid #fafafa;
+          box-shadow: 0 0 2px #007eff;
+        }
+
+      }
+      input[type="submit"] {
+        background: red;
+        color: #fff;
+        padding: 1px 8px;
+        border: 1px solid red;
+        font-size: 1.2*$base_font_size;
+        font-family: "Microsoft YaHei", Tahoma, Verdana, SimSun;
+        outline-width: medium;
+        outline-style: none;
+        outline-color: invert;
+        //margin-left: -44px;
+        &:focus {
+          border: 1px solid red;
+          box-shadow: 0 0 1px red;
+        }
+      }
+    }
+  }
+
+}

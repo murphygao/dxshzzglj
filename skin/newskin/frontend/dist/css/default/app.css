@@ -1016,9 +1016,8 @@ footer {
 
 /*search scss*/
 .zhan-nei-sou-suo {
-  border: 1px solid #2399ff;
   width: 1000px;
-  background-color: #e9f2f9; }
+  background-color: #fff; }
   .zhan-nei-sou-suo .item-list {
     padding: 20px 15px; }
     .zhan-nei-sou-suo .item-list ul li {

@@ -1014,4 +1014,27 @@ footer {
     margin: 15px 0;
     padding: 15px 0; }
 
+/*search scss*/
+.zhan-nei-sou-suo {
+  border: 1px solid #2399ff;
+  width: 1000px;
+  background-color: #e9f2f9; }
+  .zhan-nei-sou-suo .item-list {
+    padding: 20px 15px; }
+    .zhan-nei-sou-suo .item-list ul li {
+      margin-top: 15px;
+      border-bottom: 1px dashed #619fd3; }
+    .zhan-nei-sou-suo .item-list ul li h4 {
+      font-size: 13.2px; }
+      .zhan-nei-sou-suo .item-list ul li h4 a {
+        text-decoration: none;
+        color: #666;
+        font-weight: bold; }
+    .zhan-nei-sou-suo .item-list ul li p {
+      font-size: 13.2px;
+      margin-top: 5px; }
+
+.result {
+  font-size: 13.2px; }
+
 /*# sourceMappingURL=app.css.map */

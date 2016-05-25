@@ -35,7 +35,7 @@
     ul li {
       height: 30px;
       line-height: 30px;
-      border-bottom: 1px dotted darken($base_bg, 25%);
+      border-bottom: 1px dashed darken($base_bg, 25%);
     }
     ul li a {
       text-decoration: none;

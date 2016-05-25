@@ -488,7 +488,7 @@ footer {
   .gongzuodongtai .box-bd ul > li:not(:first-child) {
     height: 32px;
     line-height: 32px;
-    border-bottom: 1px solid #e6e6e6; }
+    border-bottom: 1px dashed #e6e6e6; }
     .gongzuodongtai .box-bd ul > li:not(:first-child) a {
       width: 340px;
       color: #2399ff;
@@ -576,7 +576,7 @@ footer {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        border-bottom: 1px dotted #619fd3; }
+        border-bottom: 1px dashed #619fd3; }
         .banshifuwu .box-bd .bd ul li i.fa {
           padding-right: 5px; }
         .banshifuwu .box-bd .bd ul li a {
@@ -623,7 +623,7 @@ footer {
     .gongshigonggao .box-bd ul li {
       height: 30px;
       line-height: 30px;
-      border-bottom: 1px dotted #89b7de; }
+      border-bottom: 1px dashed #89b7de; }
     .gongshigonggao .box-bd ul li a {
       text-decoration: none;
       display: inline-block;
@@ -682,7 +682,7 @@ footer {
       white-space: nowrap;
       text-overflow: ellipsis;
       margin-right: 30px;
-      border-bottom: 1px dotted #619fd3; }
+      border-bottom: 1px dashed #619fd3; }
       .chaxunfuwu .box-bd ul li i.fa {
         padding-right: 5px; }
       .chaxunfuwu .box-bd ul li a {

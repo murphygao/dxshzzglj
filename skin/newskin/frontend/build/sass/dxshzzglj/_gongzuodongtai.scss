@@ -47,7 +47,7 @@
     ul > li:not(:first-child) {
       height: 32px;
       line-height: 32px;
-      border-bottom: 1px solid darken(#fff, 10%);
+      border-bottom: 1px dashed darken(#fff, 10%);
       a {
         width: 340px;
         color: $base_theme_color;

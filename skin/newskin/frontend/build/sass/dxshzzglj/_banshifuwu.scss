@@ -92,7 +92,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        border-bottom: 1px dotted darken($base_bg, 35%);
+        border-bottom: 1px dashed darken($base_bg, 35%);
         i.fa {
           padding-right: 5px;
         }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>[!--pagetitle--]</title>
+  <title>[!--pagetitle--]--<?=$public_r[sitename]?></title>
   <meta name="keywords" content="[!--pagekey--]"/>
   <meta name="description" content="[!--pagedes--]"/>
 
@@ -40,16 +40,8 @@
 <div class="wrap margin-top-15">
   <div class="second-list clearfix">
     <div class="list-left">
-      <ul class="menu">
-        [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid='$GLOBALS[navclassid]' order by myorder,classid
-        desc",0,24,0}]
-        <?php $classurl=sys_ReturnBqClassname($bqr,9);?>
-        <li><a href="<?=$classurl?>"><?=$bqr[classname]?></a></li>
-        [/e:loop]
-      </ul>
-      <ul class="others margin-top-15">
+      <ul class="others">
         <div class="title">热点排行</div>
-
         [e:loop={0,5,4,0}]
         <li><a href="<?=$bqsr['titleurl']?>" target="_blank"><i><?=$bqno?></i><?=$bqr['title']?></a></li>
         [/e:loop]
@@ -65,11 +57,11 @@
             </div>
 
             [!--empirenews.listtemp--]
-              <!--list.var1-->
-              <!--list.var2-->
-              <!--list.var3-->
-              <!--list.var4-->
-              <!--list.var5-->
+            <!--list.var1-->
+            <!--list.var2-->
+            <!--list.var3-->
+            <!--list.var4-->
+            <!--list.var5-->
             [!--empirenews.listtemp--]
           </ul>
         </div>

@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="[!--news.url--]node_modules/animate.css/animate.min.css">
 
   <!-- owl carousel -->
-  <link rel="stylesheet" href="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
+  <link rel="stylesheet"
+        href="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
 
   <link rel="stylesheet" href="[!--news.url--]node_modules/vegas/dist/vegas.min.css">
 
@@ -71,27 +72,15 @@
   <div class="section-one clearfix">
     <div class="slideBox">
       <div id="jiaodianxinwen" class="owl-carousel">
+        [e:loop={0,5,3,1,'isgood=1'}]
         <div class="item">
-          <a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-03.jpg"></a>
+          <a href="<?=$bqsr[titleurl]?>" target="_blank"><img src="<?=$bqr[titlepic]?>"></a>
 
           <div class="title">
-            领导调研一
+            <?=$bqr[titile]?>
           </div>
         </div>
-        <div class="item">
-          <a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-05.jpg"></a>
-
-          <div class="title">
-            领导调研二
-          </div>
-        </div>
-        <div class="item">
-          <a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-06.jpg"></a>
-
-          <div class="title">
-            领导调研二
-          </div>
-        </div>
+        [/e:loop]
       </div>
     </div>
     <div class="gongzuodongtai">
@@ -100,37 +89,44 @@
       </div>
       <div class="box-bd">
         <ul>
-          <li><a href="#">
-            <h3>中共定西社会组织管理局开展调研工作</h3>
+          [e:loop={0,1,3,0,'firsttitle=1','newstime DESC'}]
+          <li><a href="<?=$bqsr[titleurl]?>" target="_blank">
+            <h3><?=$bqr[title]?></h3>
+            <p><?=$bqr[smalltext]?></p>
+          </a>
+          </li>
+          [/e:loop]
 
-            <p>
-              中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局中共定西社会组织管理局</p>
-          </a></li>
+          [e:loop={0,1,3,0,'firsttitle=2','newstime DESC'}]
           <li>
-            <a href="#">会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-            <span>[2020-09-12]</span>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
+            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
+          [/e:loop]
+          [e:loop={0,1,3,0,'firsttitle=3','newstime DESC'}]
           <li>
-            <a href="#">会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-            <span>[2020-09-12]</span>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
+            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
+          [/e:loop]
+          [e:loop={0,1,3,0,'firsttitle=4','newstime DESC'}]
           <li>
-            <a href="#">会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-            <span>[2020-09-12]</span>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
+            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
+          [/e:loop]
+          [e:loop={0,1,3,0,'firsttitle=5','newstime DESC'}]
           <li>
-            <a href="#">会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-            <span>[2020-09-12]</span>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
+            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
+          [/e:loop]
+          [e:loop={0,1,3,0,'firsttitle=6','newstime DESC'}]
           <li>
-            <a href="#">会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-            <span>[2020-09-12]</span>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
+            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
-          <li>
-            <a href="#">会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-            <span>[2020-09-12]</span>
-          </li>
-
+          [/e:loop]
         </ul>
       </div>
     </div>
@@ -200,32 +196,20 @@
       </div>
     </div>
 
+    <!--区县动态-->
     <div class="chaxunfuwu">
       <div class="box-hd">
-        <span class="title"><i class="fa fa-chevron-down"></i>区县动态</span><a href="#" class="more">更多<i class="fa fa-angle-double-right"></i></a>
+        <span class="title"><i class="fa fa-chevron-down"></i>
+          <?=$class_r[17]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=17" class="more" target="_blank">更多<i
+        class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd clearfix">
         <ul>
+          [e:loop={17,6,0,0}]
           <li>
-            <a href="#"><i class="fa fa-angle-double-right"></i>会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-double-right"></i><?=$bqr[title]?></a>
           </li>
-
-          <li>
-            <a href="#"><i class="fa fa-angle-double-right"></i>会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-angle-double-right"></i>会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-angle-double-right"></i>会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-angle-double-right"></i>会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-angle-double-right"></i>会组织管理局中共定西社会组织管理局中共定西会组织管理局中共定西社会组织管理局中共定西</a>
-          </li>
-
+          [/e:loop]
         </ul>
       </div>
     </div>
@@ -239,65 +223,34 @@
       <div class="box-bd">
         <a href="#">
           <img src="/skin/newskin/frontend/dist/images/wsbs_b1.gif" alt="">
+
           <h3>办事指南</h3>
         </a>
         <a href="#">
           <img src="/skin/newskin/frontend/dist/images/wsbs_b3.gif" alt="">
+
           <h3>表格下载</h3>
         </a>
         <a href="#">
           <img src="/skin/newskin/frontend/dist/images/wsbs_b4.gif" alt="">
+
           <h3>年检登录</h3>
         </a>
       </div>
     </div>
     <div class="gongshigonggao">
       <div class="box-hd">
-        <span class="title">通知公告</span><a href="#" class="more">更多<i class="fa fa-angle-double-right"></i></a>
+        <span class="title"><?=$class_r[21]['classname']?></span>
+        <a href="[!--news.url--]e/public/ClassUrl/?classid=21" class="more" target="_blank">更多<i class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd">
         <ul>
+          [e:loop={21,10,0,0}]
           <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><span class="cat">[公告]</span><?=$bqr[title]?></a>
+            <span class="time">[<?=date('m-d',$bqr[newstime])?>]</span>
           </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-          <li>
-            <a href="#"><span class="cat">[公告]</span>组织管理局中共定西社会组织管理局中共定西</a>
-            <span class="time">[09-12]</span>
-          </li>
-
+          [/e:loop]
         </ul>
       </div>
     </div>
@@ -308,28 +261,13 @@
 <div class="wrap clearfix margin-top-15">
   <div class="news-images">
     <div class="news-images-header">
-      <a href="#" target="_blank"><i class="fa fa-image fa-dxrd"></i>社会组织风采</a>
+      <a href="[!--news.url--]e/public/ClassUrl/?classid=10" target="_blank"><i class="fa fa-image fa-dxrd"></i><?=$class_r[10]['classname']?></a>
     </div>
     <div class="bd">
       <ul>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-03.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-05.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-06.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-20.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-03.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-05.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-06.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-20.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-03.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-05.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-06.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-20.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-03.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-05.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-06.jpg" alt=""></a></li>
-        <li><a href="#"><img src="/skin/newskin/frontend/dist/images/dxrd-20.jpg" alt=""></a></li>
-
-        <!--<li><a href="#"><img src="http://placehold.it/180x120" alt=""></a></li>-->
+        [e:loop={10,10,0,1}]
+        <li><a href="<?=$bqsr[titleurl]?>"><img src="<?=$bqr[titlepic]?>" alt="<?=$bqr[title]?>"></a></li>
+        [/e:loop]
       </ul>
     </div>
   </div>

@@ -2,10 +2,10 @@
 <nav>
   <ul class="clearfix" id="nav">
     <li class="nli on">
-      <h3><a href="#">首页</a></h3>
+      <h3><a href="[!--news.url--]">首页</a></h3>
     </li>
     [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid=0 order by myorder,classid
-    desc",0,24,0}]
+    asc",0,24,0}]
     <?php $classurl=sys_ReturnBqClassname($bqr,9);?>
     <li class="nli">
       <h3><a href="<?= $classurl;?>"><?=$bqr[classname]?></a></h3>

@@ -366,7 +366,6 @@ nav {
     position: absolute;
     left: 0;
     top: 40px;
-    background: #2399ff;
     width: 100%; }
     nav .sub li {
       text-align: center;
@@ -378,8 +377,6 @@ nav {
       color: #fff;
       text-decoration: none;
       font-size: 14.4px; }
-  nav li.on {
-    background: #0073d6; }
 
 /*xinwenjiaodian scss file*/
 .slideBox {

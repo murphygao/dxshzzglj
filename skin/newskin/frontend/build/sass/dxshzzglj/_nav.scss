@@ -39,7 +39,7 @@ nav {
     position: absolute;
     left: 0;
     top: 40px;
-    background: $base_theme_color;
+    //background: $base_theme_color;
     width: 100%;
     li {
       text-align: center;
@@ -58,7 +58,7 @@ nav {
   }
 
   li.on{
-    background: darken($base_theme_color,15%);
+    //background: red;
   }
 
 }

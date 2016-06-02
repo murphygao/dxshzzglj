@@ -15,6 +15,30 @@
 <head>
 <body>
 
+
+<!--topbar-->
+<div class="topbar">
+  <div class="main clearfix">
+    <div class="left">定西社会组织欢迎您 !</div>
+    <div class="right">
+      <a href="javascript:void(0);">手机版</a> |
+      <a href="javascript:void(0);" onclick="SetHome(this,window.location)">设为首页</a> |
+      <a href="javascript:void(0);" onclick="shoucang(window.location,document.title)">加入收藏</a>
+
+    </div>
+
+    <div class="mid">
+      <form name="searchform" method="post" action="/e/search/index.php" target="_blank">
+        站内搜索 : <input type="search" name="keyboard" size="28">
+        <select name="show" style="display: none">
+          <option value="title">标题</option>
+        </select>
+        <button type="submit" style="border: none;background: transparent"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <header>
   <div class="main">
     <div class="logo"></div>
@@ -186,7 +210,7 @@
             <li><a href="#">联系我们</a></li>
             <li><a href="#">网站声明</a></li>
         </ul>
-        <p>定西市社会组织管理局</p>
+        <p>定西市民间组织管理局</p>
 
         <p>ICP备案序号 : 陇ICP备88888888号 陇公安网备案 : 88888888</p>
     </div>

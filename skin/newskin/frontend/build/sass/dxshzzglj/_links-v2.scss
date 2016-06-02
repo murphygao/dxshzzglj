@@ -34,7 +34,7 @@
       }
 
       li a {
-        font-size: $base_title_font_size;
+        font-size: 1.25*$base_font_size;
         text-decoration: none;
         color: #000;
       }
@@ -72,7 +72,7 @@
     }
     ul li a {
       text-decoration: none;
-      font-size: 1.2*$base_font_size;
+      font-size: 1.25*$base_font_size;
       color: #000;
 
       .fa{

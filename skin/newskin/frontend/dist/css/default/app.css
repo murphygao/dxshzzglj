@@ -479,9 +479,8 @@ footer {
     line-height: 35px;
     border-bottom: 1px solid #2399ff; }
     .gongzuodongtai .box-hd span.title {
-      font-size: 16.8px;
-      color: #2399ff;
-      font-weight: bold; }
+      font-size: 18px;
+      color: #2399ff; }
     .gongzuodongtai .box-hd a.more {
       float: right;
       text-decoration: none;
@@ -531,9 +530,8 @@ footer {
     border: 1px solid #2399ff; }
     .banshifuwu .box-hd span.title {
       margin-left: 10px;
-      font-size: 16.8px;
-      color: #2399ff;
-      font-weight: bold; }
+      font-size: 18px;
+      color: #2399ff; }
     .banshifuwu .box-hd span i.fa {
       padding-right: 5px; }
     .banshifuwu .box-hd a.more {
@@ -631,10 +629,9 @@ footer {
     border-bottom: 1px solid #89c8ff;
     background: linear-gradient(#e1f3ff, #fff); }
     .gongshigonggao .box-hd span.title {
-      font-size: 16.8px;
+      font-size: 18px;
       padding-left: 15px;
-      color: #2399ff;
-      font-weight: bold; }
+      color: #2399ff; }
     .gongshigonggao .box-hd a.more {
       float: right;
       text-decoration: none;
@@ -679,9 +676,8 @@ footer {
     border-right: 1px solid #2399ff;
     border-top: 1px solid #2399ff; }
     .chaxunfuwu .box-hd span.title {
-      font-size: 16.8px;
+      font-size: 18px;
       color: #2399ff;
-      font-weight: bold;
       margin-left: 10px; }
     .chaxunfuwu .box-hd span i.fa {
       padding-right: 5px; }
@@ -759,13 +755,11 @@ footer {
     border: 1px solid #2399ff;
     position: relative; }
     .links-v2 .hd .title {
-      font-size: 16.8px;
+      font-size: 18px;
       float: left;
-      width: 120px;
+      width: 130px;
       color: #2399ff;
       padding: 0 15px; }
-      .links-v2 .hd .title i, .links-v2 .hd .title span {
-        font-weight: bold; }
     .links-v2 .hd ul {
       float: left; }
       .links-v2 .hd ul li {
@@ -820,8 +814,7 @@ footer {
     margin-left: -10px;
     height: 35px;
     line-height: 35px;
-    font-size: 16.8px;
-    font-weight: bold; }
+    font-size: 18px; }
     .news-images .news-images-header a {
       margin-left: 10px;
       text-decoration: none;

@@ -14,10 +14,10 @@
     border-bottom: 1px solid lighten($base_theme_color, 20%);
     background: linear-gradient(#e1f3ff,#fff);
     span.title {
-      font-size: 1.4*$base_font_size;
+      font-size: 1.5*$base_font_size;
       padding-left: 15px;
       color: $base_theme_color;
-      font-weight: bold;
+      //font-weight: bold;
     }
     a.more {
       float: right;

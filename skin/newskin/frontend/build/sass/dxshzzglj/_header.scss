@@ -49,13 +49,14 @@ header {
     top: 50%;
     transform: translateY(-50%);
     .item a {
-      font-size: 1.2*$base_font_size;
+      font-size: 1.3*$base_font_size;
       display: inline-block;
       padding: 2px 8px;
       text-decoration: none;
       color: #fff;
+      text-shadow: $base_theme_color 1px 1px 1px;
       &.active {
-        background: red;
+        background: $base_theme_color;
         color: #fff;
       }
     }
@@ -80,10 +81,10 @@ header {
 
       }
       input[type="submit"] {
-        background: red;
+        background: $base_theme_color;
         color: #fff;
         padding: 1px 8px;
-        border: 1px solid red;
+        border: 1px solid $base_theme_color;
         font-size: 1.2*$base_font_size;
         font-family: "Microsoft YaHei", Tahoma, Verdana, SimSun;
         outline-width: medium;
@@ -91,8 +92,9 @@ header {
         outline-color: invert;
         //margin-left: -44px;
         &:focus {
-          border: 1px solid red;
-          box-shadow: 0 0 1px red;
+          border: 1px solid darken($base_theme_color,15%);
+          background: darken($base_theme_color,15%);
+          box-shadow: 0 0 1px darken($base_theme_color,15%);
         }
       }
     }

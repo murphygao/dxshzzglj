@@ -55,11 +55,11 @@ $(document).ready(function () {
     //cover: true,
     transition: ['fade', 'zoomOut', 'swirlLeft'],
     slides: [
-      {src: '/skin/newskin/frontend/dist/images/h06.jpg'},
-      {src: '/skin/newskin/frontend/dist/images/h05.jpg'}
+      {src: '/skin/newskin/frontend/dist/images/h01.jpg'},
+      {src: '/skin/newskin/frontend/dist/images/h02.jpg'},
+      {src: '/skin/newskin/frontend/dist/images/h03.jpg'}
     ]
   });
-
 
   $("#nav").slide({
     type: "menu",

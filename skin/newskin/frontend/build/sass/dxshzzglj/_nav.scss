@@ -2,10 +2,12 @@
 
 nav {
 
-  width: 100%;
+  width: 1000px;
+  margin: 0 auto;
   height: 40px;
   line-height: 40px;
   background: $base_theme_color;
+  //border-top:1px solid $base_theme_color;
   ul {
     width: $base_width;
     margin: 0 auto;
@@ -20,8 +22,8 @@ nav {
     display: inline-block;
     text-align: center;
     position: relative;
-    &:hover{
-      background: darken($base_theme_color,15%);
+    &:hover {
+      background: darken($base_theme_color, 15%);
     }
     h3 a {
       display: inline-block;
@@ -43,21 +45,21 @@ nav {
     width: 100%;
     li {
       text-align: center;
-      border-top:1px solid darken(#fff,25%);
-      background: darken($base_theme_color,15%);
-      &:hover{
-        background: darken($base_theme_color,25%);
+      border-top: 1px solid darken(#fff, 25%);
+      background: darken($base_theme_color, 15%);
+      &:hover {
+        background: darken($base_theme_color, 25%);
       }
 
     }
-    li a{
-      color:#fff;
+    li a {
+      color: #fff;
       text-decoration: none;
       font-size: 1.2*$base_font_size;
     }
   }
 
-  li.on{
+  li.on {
     //background: red;
   }
 

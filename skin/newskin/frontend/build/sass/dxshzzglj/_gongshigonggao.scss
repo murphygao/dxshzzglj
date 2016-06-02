@@ -29,18 +29,18 @@
   }
 
   .box-bd {
-    height:330px;
+    height:340px;
     padding: 15px 10px 15px 10px;
     background: #fff;
     ul li {
-      height: 30px;
-      line-height: 30px;
+      height: 31px;
+      line-height: 31px;
       border-bottom: 1px dashed darken($base_bg, 25%);
     }
     ul li a {
       text-decoration: none;
       display: inline-block;
-      width: 220px;
+      width: 210px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

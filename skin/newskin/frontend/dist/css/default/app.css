@@ -270,27 +270,44 @@ body {
 
 /* header scss */
 header {
-  width: 100%;
-  height: 150px;
+  width: 1000px;
+  height: 200px;
+  margin: 0 auto;
   background: #fff; }
   header .main {
     width: 1000px;
     margin: 0 auto;
-    height: 150px; }
+    height: 200px; }
+  header .main .logo {
+    margin-left: 20px;
+    float: left;
+    width: 65px;
+    height: 60px;
+    background: url("../../../dist/images/logo.png") no-repeat 0 center;
+    background-size: 65px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
   header .main .left {
     float: left;
+    padding-left: 15px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     color: #2399ff; }
     header .main .left h1 {
-      font-size: 32.4px;
-      font-weight: bold; }
+      font-size: 33.6px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: #2399ff 1px 1px 1px; }
     header .main .left p {
-      font-size: 18px; }
+      font-size: 19.2px;
+      color: #fff;
+      text-shadow: #2399ff 1px 1px 1px; }
   header .main .right {
     float: right;
     position: relative;
+    padding-right: 15px;
     top: 50%;
     transform: translateY(-50%); }
     header .main .right .item a {
@@ -298,7 +315,7 @@ header {
       display: inline-block;
       padding: 2px 8px;
       text-decoration: none;
-      color: #000; }
+      color: #fff; }
       header .main .right .item a.active {
         background: red;
         color: #fff; }
@@ -335,7 +352,8 @@ header {
 
 /* nav scss */
 nav {
-  width: 100%;
+  width: 1000px;
+  margin: 0 auto;
   height: 40px;
   line-height: 40px;
   background: #2399ff; }
@@ -490,7 +508,7 @@ footer {
     line-height: 32px;
     border-bottom: 1px dashed #e6e6e6; }
     .gongzuodongtai .box-bd ul > li:not(:first-child) a {
-      width: 340px;
+      width: 330px;
       color: #2399ff;
       font-size: 15px;
       white-space: nowrap;
@@ -510,13 +528,20 @@ footer {
     width: 100%;
     height: 35px;
     line-height: 35px;
-    border-bottom: 1px solid #2399ff; }
+    border: 1px solid #2399ff; }
     .banshifuwu .box-hd span.title {
+      margin-left: 10px;
       font-size: 16.8px;
       color: #2399ff;
       font-weight: bold; }
     .banshifuwu .box-hd span i.fa {
       padding-right: 5px; }
+    .banshifuwu .box-hd a.more {
+      float: right;
+      text-decoration: none;
+      color: #2399ff;
+      font-size: 14.4px;
+      margin-right: 10px; }
   .banshifuwu .box-bd {
     padding: 15px 0; }
     .banshifuwu .box-bd .hd ul {
@@ -617,17 +642,17 @@ footer {
       font-size: 14.4px;
       padding-right: 10px; }
   .gongshigonggao .box-bd {
-    height: 330px;
+    height: 340px;
     padding: 15px 10px 15px 10px;
     background: #fff; }
     .gongshigonggao .box-bd ul li {
-      height: 30px;
-      line-height: 30px;
+      height: 31px;
+      line-height: 31px;
       border-bottom: 1px dashed #89b7de; }
     .gongshigonggao .box-bd ul li a {
       text-decoration: none;
       display: inline-block;
-      width: 220px;
+      width: 210px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -665,7 +690,7 @@ footer {
       text-decoration: none;
       color: #2399ff;
       font-size: 14.4px;
-      margin-right: 5px; }
+      margin-right: 23px; }
   .chaxunfuwu .box-bd {
     width: 700px;
     height: 160px;
@@ -695,7 +720,6 @@ footer {
   float: right;
   width: 285px;
   height: 160px;
-  margin-top: 12px;
   margin-bottom: 15px;
   background: #fff; }
   .banshidating .box-hd {
@@ -806,13 +830,12 @@ footer {
         padding-right: 5px; }
   .news-images .bd {
     overflow: hidden;
-    height: 84px; }
+    height: 100px; }
     .news-images .bd ul li {
       margin-right: 10px;
       float: left; }
       .news-images .bd ul li img {
-        height: 84px;
-        width: 150px; }
+        width: 160px; }
 
 /* pagination scss */
 .pagination {

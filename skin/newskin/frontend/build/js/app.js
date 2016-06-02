@@ -16,10 +16,11 @@ $(document).ready(function () {
 
   $('header').vegas({
     timer: false,
-    cover: true,
+    //cover: true,
     transition: ['fade', 'zoomOut', 'swirlLeft'],
     slides: [
-      {src: '/skin/newskin/frontend/dist/images/h03.jpg'}
+      {src: '/skin/newskin/frontend/dist/images/h06.jpg'},
+      {src: '/skin/newskin/frontend/dist/images/h05.jpg'}
     ]
   });
 

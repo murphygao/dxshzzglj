@@ -84,7 +84,7 @@
     </div>
     <div class="gongzuodongtai">
       <div class="box-hd">
-        <span class="title">工作动态</span><a href="#" class="more">更多<i class="fa fa-angle-double-right"></i></a>
+        <span class="title">工作动态</span><a href="#" class="more">更多 <i class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd">
         <ul>
@@ -132,10 +132,24 @@
   </div>
 </div>
 
-<!--腰线-->
+
+<!--专题专栏-->
 <div class="wrap margin-top-15">
-  <script src="/d/js/acmsd/thea1.js"></script>
+  <div class="zhuantizhuanlan">
+    <div class="title"><i class="fa fa-star-o"></i><a href="/s" target="_blank">专题专栏</a></div>
+    <div id="zhuantizhuanlan" class="owl-carousel owl-theme">
+      [e:loop={'select ztname as title,addtime as newstime,ztpath as ftitle,ztimg as titlepic,intro as smalltext from [!db.pre!]enewszt order by addtime desc',1,24,0}]
+      <div class="item"><a href="<?= $bqr['ftitle']?>" target="_blank"><img src="<?= $bqr['titlepic']?>"></a></div>
+      [/e:loop]
+    </div>
+  </div>
 </div>
+
+
+<!--腰线-->
+<!--<div class="wrap margin-top-15">
+  <script src="/d/js/acmsd/thea1.js"></script>
+</div>-->
 
 <div class="wrap clearfix margin-top-15">
   <div class="left clearfix" style="float: left;width:700px;">
@@ -189,7 +203,7 @@
     <div class="chaxunfuwu">
       <div class="box-hd">
         <span class="title"><i class="fa fa-chevron-down"></i>
-          <?=$class_r[17]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=17" class="more" target="_blank">更多<i
+          <?=$class_r[17]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=17" class="more" target="_blank">更多 <i
         class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd clearfix">
@@ -230,7 +244,7 @@
     <div class="gongshigonggao">
       <div class="box-hd">
         <span class="title"><?=$class_r[21]['classname']?></span>
-        <a href="[!--news.url--]e/public/ClassUrl/?classid=21" class="more" target="_blank">更多<i class="fa fa-angle-double-right"></i></a>
+        <a href="[!--news.url--]e/public/ClassUrl/?classid=21" class="more" target="_blank">更多 <i class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd">
         <ul>

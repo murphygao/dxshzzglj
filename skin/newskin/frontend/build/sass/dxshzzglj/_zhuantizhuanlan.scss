@@ -16,6 +16,10 @@
     font-size: $base_font_size*1.5;
     color: $base_theme_color;
     overflow: hidden;
+    a{
+      text-decoration: none;
+      color: $base_theme_color;
+    }
     .fa {
       margin-right: 5px;
     }

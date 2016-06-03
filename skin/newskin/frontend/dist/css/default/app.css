@@ -1114,6 +1114,9 @@ footer {
     font-size: 18px;
     color: #2399ff;
     overflow: hidden; }
+    .zhuantizhuanlan .title a {
+      text-decoration: none;
+      color: #2399ff; }
     .zhuantizhuanlan .title .fa {
       margin-right: 5px; }
   .zhuantizhuanlan #zhuantizhuanlan {

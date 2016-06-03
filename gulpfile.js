@@ -5,7 +5,14 @@
 
 var theme = 'default';
 
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+
 var gulp = require('gulp');
+var gulpLoadPlugins = require('gulp-load-plugins');
+var plugins = gulpLoadPlugins();
+
+
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
@@ -19,6 +26,7 @@ var htmlmin = require('gulp-htmlmin');
 
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+
 
 var paths = {
   buildSass: ['skin/newskin/frontend/build/sass/**/*.scss'],
@@ -37,8 +45,8 @@ var paths = {
   ],
   distPagegsDir: 'skin/newskin/frontend/dist/pages/' + theme,
 
-  //buildImagesDir: 'build/images/**/*',
-  //distImagesDir: 'dist/images',
+  buildImagesDir: 'skin/newskin/frontend/build/images/**/*',
+  distImagesDir: 'skin/newskin/frontend/dist/images',
 
   buildPluginDir: ['skin/newskin/frontend/build/plugins/**/*'],
   distPluginDir: 'skin/newskin/frontend/dist/plugins',
@@ -77,9 +85,9 @@ gulp.task('cleanDistPagesDir', function () {
 });
 
 // 5 clean dist images dir
-/*gulp.task('cleanDistImagesDir', function () {
+gulp.task('cleanDistImagesDir', function () {
   return del(paths.distImagesDir);
-});*/
+});
 
 // 6 clean dist plugins dir
 gulp.task('cleanDistPluginsDir', function () {
@@ -115,13 +123,16 @@ gulp.task('js', ['cleanDistJsDir'], function () {
 });
 
 // 4 imagesmin
-/*gulp.task('imagesmin', ['cleanDistImagesDir'], function () {
+gulp.task('imagemin', ['cleanDistImagesDir'], function () {
   return gulp.src(paths.buildImagesDir)
-    .pipe(imagemin({
-      optimizationLevel: 5,
-    }))
-    .pipe(gulp.dest(paths.distImagesDir));
-});*/
+    .pipe(plugins.cache(plugins.imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest(paths.distImagesDir))
+    .pipe(plugins.size({title: 'imagemin'}));
+});
+
 
 // 5 parse include html content
 gulp.task('fileinclude', ['cleanDistPagesDir'], function () {
@@ -153,6 +164,7 @@ gulp.task('sass', ['cleanDistCssDir'], function () {
     .pipe(gulp.dest(paths.distCssDir));
 });
 
+
 // watch
 // watch ./build/sass directory
 gulp.task('watch-sass', function () {
@@ -168,6 +180,7 @@ gulp.task('watch-template', function () {
 gulp.task('watch-js', function () {
   gulp.watch('skin/newskin/frontend/build/js/**/*.js', ['js']);
 });
+
 
 gulp.task('watch', ['php', 'watch-sass', 'watch-js', 'watch-template']);
 

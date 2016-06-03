@@ -985,6 +985,16 @@ footer {
   .second-list .list-right .section-a .third-list ul li .fa {
     padding-right: 8px; }
 
+.third-list .ztzl-body {
+  padding: 10px; }
+  .third-list .ztzl-body a {
+    display: block;
+    float: left;
+    margin: 15px 5px; }
+  .third-list .ztzl-body a img {
+    width: 150px;
+    height: 40px; }
+
 /* content scss */
 .content {
   background-color: #fff;

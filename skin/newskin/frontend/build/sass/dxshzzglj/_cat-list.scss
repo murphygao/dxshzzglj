@@ -159,3 +159,18 @@
     }
   }
 }
+
+// 专题专栏
+.third-list .ztzl-body {
+  padding: 10px;
+
+  a {
+    display: block;
+    float: left;
+    margin: 15px 5px;
+  }
+  a img {
+    width: 150px;
+    height: 40px;
+  }
+}

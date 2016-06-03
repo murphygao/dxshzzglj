@@ -108,5 +108,7 @@ UEditor的版本一定要和帝国CMS相同，否则会出现乱码。也就是�
 - admin/main.php 为后台登录后的首页,替换即可
 
 
-
+- 该文件位于e/class目录下,
+  修改记录:
+  修改了ReturnZtLink函数
 

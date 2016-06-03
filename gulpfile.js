@@ -32,7 +32,8 @@ var paths = {
     'skin/newskin/frontend/build/html-template/second-list.html',
     'skin/newskin/frontend/build/html-template/third-list.html',
     'skin/newskin/frontend/build/html-template/third-list-images.html',
-    'skin/newskin/frontend/build/html-template/content.html'
+    'skin/newskin/frontend/build/html-template/content.html',
+    'skin/newskin/frontend/build/html-template/zhuantizhuanlan.html',
   ],
   distPagegsDir: 'skin/newskin/frontend/dist/pages/' + theme,
 

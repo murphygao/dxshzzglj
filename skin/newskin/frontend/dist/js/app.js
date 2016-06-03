@@ -50,6 +50,7 @@ function shoucang(sTitle, sURL) {
 
 $(document).ready(function () {
 
+  // 首页头部背景图切换
   $('header').vegas({
     timer: false,
     //cover: true,
@@ -61,6 +62,7 @@ $(document).ready(function () {
     ]
   });
 
+  // 导航下拉
   $("#nav").slide({
     type: "menu",
     titCell: ".nli",
@@ -71,6 +73,7 @@ $(document).ready(function () {
     returnDefault: true
   });
 
+  // 幻灯片切换
   $("#jiaodianxinwen").owlCarousel({
     loop: true,
     //margin:10,
@@ -94,10 +97,23 @@ $(document).ready(function () {
     }
   });
 
+  // 专题专栏
+  $("#zhuantizhuanlan").owlCarousel({
+    loop: true,
+    margin: 15,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    items: 4,
+    nav: true,
+    navText: [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ],
+  });
+
+  // 信息公开菜单切换
   jQuery(".box-a").slide({});
-
-
-  $("#news-box-c-2").slide({});
 
 
   // 底部图片滚动
@@ -109,6 +125,9 @@ $(document).ready(function () {
     interTime: 30,
     trigger: "click"
   });
+
+  // 友情链接切换
+  $("#news-box-c-2").slide({});
 
   /////////////////////////////////////////////
 

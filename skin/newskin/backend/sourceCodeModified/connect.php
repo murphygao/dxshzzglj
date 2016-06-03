@@ -1501,14 +1501,14 @@ function ReturnClassLink($classid)
 function ReturnZtLink($ztid)
 {
     global $class_zr, $public_r, $fun_r;
-    $string = "<a href=\"" . ReturnSiteIndexUrl() . "\">" . $fun_r['index'] . "</a>";
+    $string = "<li><a href=\"" . ReturnSiteIndexUrl() . "\">" . $fun_r['index'] . "</a></li>";
     //无绑定域名
     if (empty($class_zr[$ztid][zturl])) {
         $url = $public_r[newsurl] . $class_zr[$ztid][ztpath] . "/";
     } else {
         $url = $class_zr[$ztid][zturl];
     }
-    $string .= "&nbsp;" . $public_r[navfh] . "&nbsp;<a href=\"" . $url . "\">" . $class_zr[$ztid][ztname] . "</a>";
+    $string .= $public_r[navfh] . "<li><a href=\"" . $url . "\">" . $class_zr[$ztid][ztname] . "</a></li>";
     return $string;
 }
 

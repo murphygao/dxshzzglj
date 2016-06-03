@@ -1089,4 +1089,52 @@ footer {
         font-size: 13.8px;
         color: #666; }
 
+/*zhuan ti zhuan lan  scss file */
+.zhuantizhuanlan {
+  width: 1000px;
+  height: 70px;
+  background: #fff;
+  padding: 15px 10px; }
+  .zhuantizhuanlan .title {
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #2399ff;
+    overflow: hidden; }
+    .zhuantizhuanlan .title .fa {
+      margin-right: 5px; }
+  .zhuantizhuanlan #zhuantizhuanlan {
+    float: left;
+    width: 870px;
+    overflow: hidden; }
+  .zhuantizhuanlan .item a img {
+    height: 40px; }
+  .zhuantizhuanlan .owl-stage-outer {
+    width: 830px;
+    margin: 0 auto;
+    overflow: hidden; }
+  .zhuantizhuanlan .owl-nav .owl-prev {
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 40px;
+    line-height: 40px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px; }
+  .zhuantizhuanlan .owl-nav .owl-next {
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 40px;
+    line-height: 40px;
+    right: 0;
+    top: 50%;
+    font-size: 30px;
+    transform: translateY(-50%); }
+
 /*# sourceMappingURL=app.css.map */

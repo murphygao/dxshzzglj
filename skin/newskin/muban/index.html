@@ -68,6 +68,21 @@
 [!--temp.dxshzzglj-nav--]
 
 
+<!--最新动态-->
+<div class="wrap" style="margin-top: 0;">
+  <div class="topnews clearfix">
+    <div class="left clearfix" id="latest-news">
+      <span class=""><i class="fa fa-hand-o-right fa-padding-right-5"></i>最新动态 : </span>
+      <ul>
+        [e:loop={0,8,3,0}]
+        <li><a href="#">定西人大常务委员会关于市县两[2016-05-12]</a></li>
+        <li><a href="<?=$bqsr['titleurl']?>" target="_blank"><?= $bqr[title]?>[<?=date('Y-m-d',$bqr[newstime])?>]</a></li>
+        [/e:loop]
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="wrap">
   <div class="section-one clearfix">
     <div class="slideBox">

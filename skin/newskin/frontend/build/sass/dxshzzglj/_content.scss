@@ -21,10 +21,11 @@
   .content-desc {
     padding: 7px 0;
     text-align: center;
-    font-size: 1*$base_font_size;
+    font-size: 1.1*$base_font_size;
+    color: lighten($base_font_color,20%);
     a {
       text-decoration: none;
-      color: $base_font_color;
+      color: lighten($base_font_color,15%);
     }
   }
   .content-zhengwen {

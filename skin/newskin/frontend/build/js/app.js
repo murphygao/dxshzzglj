@@ -39,7 +39,18 @@ function shoucang(sTitle, sURL) {
   }
 }
 
+
+
+
 $(document).ready(function () {
+
+  $("#latest-news").slide({
+    mainCell: "ul",
+    autoPlay: true,
+    effect: "leftMarquee",
+    interTime: 50,
+    trigger: "click"
+  });
 
   // 首页头部背景图切换
   $('header').vegas({

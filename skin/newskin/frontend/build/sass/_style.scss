@@ -35,7 +35,7 @@ body {
 }
 
 .section-one {
-  margin-top: 15px;
+  //margin-top: 15px;
   padding: 15px;
   border: 1px solid $base_theme_color;
   background: #fff;
@@ -59,4 +59,8 @@ body {
   }
 }
 
+
+.fa-padding-right-5{
+  padding-right:5px;
+}
 

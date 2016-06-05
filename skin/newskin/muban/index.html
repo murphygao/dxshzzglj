@@ -284,45 +284,29 @@
         <span>友情链接</span>
       </div>
       <ul>
-        <li class="on"><a href="javascript:void (0);">市内导航<i class="fa fa-angle-down"></i></a></li>
-        <li><a href="javascript:void(0);">省内导航<i class="fa fa-angle-down"></i></a></li>
-        <li><a href="javascript:void(0);">中央网站<i class="fa fa-angle-down"></i></a></li>
-        <li><a href="javascript:void(0);">外地网站<i class="fa fa-angle-down"></i></a></li>
-        <li><a href="javascript:void(0);">新闻网站<i class="fa fa-angle-down"></i></a></li>
+        <li class="on"><a href="javascript:void (0);">国家民间社会组织网站<i class="fa fa-angle-down"></i></a></li>
+        <li><a href="javascript:void(0);">甘肃社会组织网站<i class="fa fa-angle-down"></i></a></li>
+        <li><a href="javascript:void(0);">其他网站<i class="fa fa-angle-down"></i></a></li>
       </ul>
     </div>
     <div class="bd clearfix">
-      <!--市内导航-->
+      <!--国家民间社会组织网站-->
       <ul>
-        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=1 order by lid',20,24,0}]
+        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=6 order by lid',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
         [/e:loop]
       </ul>
 
-      <!--省内导航-->
+      <!--甘肃社会组织网站-->
       <ul>
-        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=2 order by lid',20,24,0}]
+        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=7 order by lid',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
         [/e:loop]
       </ul>
 
-      <!--中央网站-->
+      <!--其他网站-->
       <ul>
-        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=3 order by lid',20,24,0}]
-        <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
-        [/e:loop]
-      </ul>
-
-      <!--外地网站-->
-      <ul>
-        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=4 order by lid',20,24,0}]
-        <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
-        [/e:loop]
-      </ul>
-
-      <!--新闻网站-->
-      <ul>
-        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=5 order by lid',20,24,0}]
+        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=8 order by lid',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
         [/e:loop]
       </ul>

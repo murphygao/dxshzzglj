@@ -9,23 +9,13 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 var gulp = require('gulp');
+
 var gulpLoadPlugins = require('gulp-load-plugins');
 var plugins = gulpLoadPlugins();
 
 
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var replace = require('gulp-replace');
-var php = require('gulp-connect-php');
-var fileinclude = require('gulp-file-include');
+var phpServer = require('gulp-connect-php');
 var del = require('del');
-var imagemin = require('gulp-imagemin');
-var cleanCss = require('gulp-clean-css');
-var htmlmin = require('gulp-htmlmin');
-
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 
 
 var paths = {
@@ -57,7 +47,7 @@ var paths = {
 
 // start up a php server at localhost:8888
 gulp.task('php', function () {
-  php.server({
+  phpServer.server({
     port: 8888,
     keepalive: true
   });
@@ -95,11 +85,6 @@ gulp.task('cleanDistPluginsDir', function () {
 });
 
 // build
-// copy fonts to css
-gulp.task('copyFontsToCssDir', function () {
-  return gulp.src(paths.buildFontsDir)
-    .pipe(gulp.dest(paths.distCssDir));
-});
 
 // 1 copy build plugins files to dist plugin folder
 gulp.task('copyFontsFiles', ['cleanDistFontsDir'], function () {
@@ -116,10 +101,11 @@ gulp.task('copyPluginFiles', ['cleanDistPluginsDir'], function () {
 // 3 concat js files
 gulp.task('js', ['cleanDistJsDir'], function () {
   return gulp.src(paths.buildJsDir)
-    .pipe(concat('app.js'))
+    .pipe(plugins.concat('app.js'))
     // uncomment it if you want to reduce the js file sizes
-    //.pipe(uglify())
-    .pipe(gulp.dest(paths.distJsDir));
+    .pipe(plugins.uglify())
+    .pipe(gulp.dest(paths.distJsDir))
+    .pipe(plugins.size({title: 'js'}));
 });
 
 // 4 imagesmin
@@ -137,30 +123,37 @@ gulp.task('imagemin', ['cleanDistImagesDir'], function () {
 // 5 parse include html content
 gulp.task('fileinclude', ['cleanDistPagesDir'], function () {
   return gulp.src(paths.buildHtmlTemplate)
-    .pipe(fileinclude({
+    .pipe(plugins.fileInclude({
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(replace('{{theme}}', theme))
+    .pipe(plugins.replace('{{theme}}', theme))
     // minified html
-    //.pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest(paths.distPagegsDir));
+    .pipe(plugins.htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(paths.distPagegsDir))
+    .pipe(plugins.size({title: 'fileinclude'}));
 });
 
 // 6 compile sass file
 gulp.task('sass', ['cleanDistCssDir'], function () {
   return gulp.src(paths.buildSass)
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.sass({
+      precision: 10
+    }).on('error', plugins.sass.logError))
+    .pipe(plugins.autoprefixer({
+      browsers: ['last 5 versions'],
       cascade: false
     }))
-    // uncomment,because current it doesnot used
+    // uncomment,because current it does not used
     // .pipe(replace('../../../', '../../'))
     // in product you need uncomment it for minify css
-    // .pipe(cleanCss({compatibility: 'ie8'}))
-    .pipe(sourcemaps.write('./'))
+    // Concatenate and minify styles
+    .pipe(plugins.if('*.css', plugins.cssnano({
+      autoprefixer: false
+    })))
+    .pipe(plugins.size({title: 'sass'}))
+    .pipe(plugins.sourcemaps.write('./'))
     .pipe(gulp.dest(paths.distCssDir));
 });
 
@@ -181,9 +174,14 @@ gulp.task('watch-js', function () {
   gulp.watch('skin/newskin/frontend/build/js/**/*.js', ['js']);
 });
 
+// watch build/images directory
+gulp.task('watch-imagemin', function () {
+  gulp.watch(paths.buildImagesDir, ['imagemin']);
+});
 
-gulp.task('watch', ['php', 'watch-sass', 'watch-js', 'watch-template']);
+
+gulp.task('watch', ['php', 'watch-sass', 'watch-js', 'watch-template', 'watch-imagemin']);
 
 gulp.task('clean', ['cleanDistFontsDir', 'cleanDistCssDir', 'cleanDistJsDir', 'cleanDistPagesDir', 'cleanDistImagesDir', 'cleanDistPluginsDir']);
 
-gulp.task('build', ['copyFontsFiles', 'copyPluginFiles', 'js', 'imagesmin', 'fileinclude', 'sass']);
+gulp.task('build', ['copyFontsFiles', 'copyPluginFiles', 'js', 'imagemin', 'fileinclude', 'sass']);

@@ -17,49 +17,21 @@
   <link rel="stylesheet" href="[!--news.url--]node_modules/animate.css/animate.min.css">
 
   <!-- owl carousel -->
-  <link rel="stylesheet"
-        href="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
+  <link rel="stylesheet" href="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
 
+  <!--vegas.css-->
   <link rel="stylesheet" href="[!--news.url--]node_modules/vegas/dist/vegas.min.css">
 
   <!--app.css-->
   <link rel="stylesheet" href="[!--news.url--]skin/newskin/frontend/dist/css/default/app.css">
 
-  <!--跳转手机站-->
-  <SCRIPT LANGUAGE="JavaScript">
-    function mobile_device_detect(url) {
-      var thisOS = navigator.platform;
-      var os = new Array("iPhone", "iPod", "iPad", "android", "Nokia", "SymbianOS", "Symbian", "Windows Phone", "Phone", "Linux armv71", "MAUI", "UNTRUSTED/1.0", "Windows CE", "BlackBerry", "IEMobile");
-      for (var i = 0; i < os.length; i++) {
-        if (thisOS.match(os[i])) {
-          window.location = url;
-        }
+  <!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
 
-      }
-      //因为相当部分的手机系统不知道信息,这里是做临时性特殊辨认
-      if (navigator.platform.indexOf('iPad') != -1) {
-        window.location = url;
-      }
-      //做这一部分是因为Android手机的内核也是Linux
-      //但是navigator.platform显示信息不尽相同情况繁多,因此从浏览器下手，即用navigator.appVersion信息做判断
-      var check = navigator.appVersion;
-      if (check.match(/linux/i)) {
-        //X11是UC浏览器的平台 ，如果有其他特殊浏览器也可以附加上条件
-        if (check.match(/mobile/i) || check.match(/X11/i)) {
-          window.location = url;
-        }
-      }
-      //类in_array函数
-      Array.prototype.in_array = function (e) {
-        for (i = 0; i < this.length; i++) {
-          if (this[i] == e)
-            return true;
-        }
-        return false;
-      }
-    }
-    //mobile_device_detect("http://rdw.jq2.com/");
-  </SCRIPT>
+  <!--goto mobile site-->
+  <script src="http://siteapp.baidu.com/static/webappservice/uaredirect.js" type="text/javascript"></script>
+  <!--<script type="text/javascript">uaredirect("/");</script>-->
 
 </head>
 
@@ -76,7 +48,8 @@
       <ul>
         [e:loop={0,8,3,0}]
         <li><a href="#">定西人大常务委员会关于市县两[2016-05-12]</a></li>
-        <li><a href="<?=$bqsr['titleurl']?>" target="_blank"><?= $bqr[title]?>[<?=date('Y-m-d',$bqr[newstime])?>]</a></li>
+        <li><a href="<?=$bqsr['titleurl']?>" target="_blank"><?= $bqr[title]?>[<?=date('Y-m-d',$bqr[newstime])?>]</a>
+        </li>
         [/e:loop]
       </ul>
     </div>
@@ -90,6 +63,7 @@
         [e:loop={0,5,3,1,'isgood=1'}]
         <div class="item">
           <a href="<?=$bqsr[titleurl]?>" target="_blank"><img src="<?=$bqr[titlepic]?>"></a>
+
           <div class="title">
             <?=esub($bqr[title],50,'...')?>
           </div>
@@ -106,6 +80,7 @@
           [e:loop={0,1,3,0,'firsttitle=1','newstime DESC'}]
           <li><a href="<?=$bqsr[titleurl]?>" target="_blank">
             <h3><?=$bqr[title]?></h3>
+
             <p><?=$bqr[smalltext]?></p>
           </a>
           </li>
@@ -153,7 +128,8 @@
   <div class="zhuantizhuanlan">
     <div class="title"><i class="fa fa-star-o"></i><a href="/s" target="_blank">专题专栏</a></div>
     <div id="zhuantizhuanlan" class="owl-carousel owl-theme">
-      [e:loop={'select ztname as title,addtime as newstime,ztpath as ftitle,ztimg as titlepic,intro as smalltext from [!db.pre!]enewszt order by addtime desc',1,24,0}]
+      [e:loop={'select ztname as title,addtime as newstime,ztpath as ftitle,ztimg as titlepic,intro as smalltext from
+      [!db.pre!]enewszt order by addtime desc',1,24,0}]
       <div class="item"><a href="<?= $bqr['ftitle']?>" target="_blank"><img src="<?= $bqr['titlepic']?>"></a></div>
       [/e:loop]
     </div>
@@ -188,25 +164,31 @@
             <!--行政许可-->
             <ul>
               [e:loop={13,10,0,0}]
-              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a></li>
+              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
+              </li>
               [/e:loop]
-              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=13" target="_blank">更多 <i class="fa fa-angle-double-right"></i></a></div>
+              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=13" target="_blank">更多 <i
+                class="fa fa-angle-double-right"></i></a></div>
             </ul>
 
             <!--查处公告-->
             <ul>
               [e:loop={14,10,0,0}]
-              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a></li>
+              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
+              </li>
               [/e:loop]
-              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=14" target="_blank">更多 <i class="fa fa-angle-double-right"></i></a></div>
+              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=14" target="_blank">更多 <i
+                class="fa fa-angle-double-right"></i></a></div>
             </ul>
 
             <!--年检结果-->
             <ul>
               [e:loop={16,10,0,0}]
-              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a></li>
+              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
+              </li>
               [/e:loop]
-              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=16" target="_blank">更多 <i class="fa fa-angle-double-right"></i></a></div>
+              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=16" target="_blank">更多 <i
+                class="fa fa-angle-double-right"></i></a></div>
             </ul>
           </div>
 
@@ -218,7 +200,8 @@
     <div class="chaxunfuwu">
       <div class="box-hd">
         <span class="title"><i class="fa fa-chevron-down"></i>
-          <?=$class_r[17]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=17" class="more" target="_blank">更多 <i
+          <?=$class_r[17]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=17" class="more"
+                                                  target="_blank">更多 <i
         class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd clearfix">
@@ -259,7 +242,8 @@
     <div class="gongshigonggao">
       <div class="box-hd">
         <span class="title"><?=$class_r[21]['classname']?></span>
-        <a href="[!--news.url--]e/public/ClassUrl/?classid=21" class="more" target="_blank">更多 <i class="fa fa-angle-double-right"></i></a>
+        <a href="[!--news.url--]e/public/ClassUrl/?classid=21" class="more" target="_blank">更多 <i
+          class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd">
         <ul>
@@ -279,12 +263,14 @@
 <div class="wrap clearfix margin-top-15">
   <div class="news-images">
     <div class="news-images-header">
-      <a href="[!--news.url--]e/public/ClassUrl/?classid=10" target="_blank"><i class="fa fa-image fa-dxrd"></i><?=$class_r[10]['classname']?></a>
+      <a href="[!--news.url--]e/public/ClassUrl/?classid=10" target="_blank"><i
+        class="fa fa-image fa-dxrd"></i><?=$class_r[10]['classname']?></a>
     </div>
     <div class="bd">
       <ul>
         [e:loop={10,10,0,1}]
-        <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><img src="<?=$bqr[titlepic]?>" alt="<?=$bqr[title]?>"></a></li>
+        <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><img src="<?=$bqr[titlepic]?>" alt="<?=$bqr[title]?>"></a>
+        </li>
         [/e:loop]
       </ul>
     </div>
@@ -334,18 +320,26 @@
   <ul>
     <li><a class="youhui">
       <img src="/skin/newskin/frontend/dist/images/foot03/wxlogo.png" width="47" height="49" class="shows"/>
-      <img src="/skin/newskin/frontend/dist/images/wx.png" style="width:200px;height:200px;" class="hides" />
+      <img src="/skin/newskin/frontend/dist/images/wx.png" style="width:200px;height:200px;" class="hides"/>
     </a></li>
 
     <li><a id="top_btn"><img src="/skin/newskin/frontend/dist/images/foot03/ll06.png" width="131" height="49"
                              class="hides"/><img src="/skin/newskin/frontend/dist/images/foot03/l06.png" width="47"
                                                  height="49" class="shows"/></a></li>
   </ul>
-</div><!--leftsead end-->
+</div>
+<!--leftsead end-->
 
 
 [!--temp.dxshzzglj-footer--]
+
+<!--[if (!IE)|(gt IE 8)]><!-->
 <script src="[!--news.url--]node_modules/jquery/dist/jquery.min.js"></script>
+<!--<![endif]-->
+
+<!--[if lte IE 8]>
+<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<![endif]-->
 <script src="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/owl.carousel.min.js"></script>
 <script src="[!--news.url--]skin/newskin/frontend/dist/plugins/jquery.SuperSlider/jquery.SuperSlide.2.1.1.js"></script>
 <script src="[!--news.url--]node_modules/vegas/dist/vegas.min.js"></script>

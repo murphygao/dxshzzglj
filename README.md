@@ -53,3 +53,20 @@
 - slider使用owl-carousel#2.0
 - 多处使用jquery.SuperSlide.2.1.1,感谢
 
+### 不完善的IE8支持
+```javascript
+//页面head加入如下代码
+<!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+
+//如果要引入jquery,则需要引入如下代码
+<!--[if (!IE)|(gt IE 8)]><!-->
+<script src="//cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
+<!--<![endif]-->
+
+<!--[if lte IE 8]>
+<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<![endif]-->
+```
+

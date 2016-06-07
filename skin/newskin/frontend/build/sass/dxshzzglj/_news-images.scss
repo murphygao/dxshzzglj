@@ -28,20 +28,11 @@
     height: 100px;
     padding:5px 0;
     ul li {
-      height: 90px;
-      a{
-        display:block;
-      }
       margin-right: 10px;
-      float: left;
+      display: inline;
       img {
-        display:block;
-        margin-left:auto;
-        margin-right:auto;
         width: 160px;
         height:90px;
-        max-width:160px;
-        _width:expression(this.width<160px?"auto":"160px");
       }
     }
   }

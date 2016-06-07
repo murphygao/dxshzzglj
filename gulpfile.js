@@ -142,7 +142,7 @@ gulp.task('sass', ['cleanDistCssDir'], function () {
       precision: 10
     }).on('error', plugins.sass.logError))
     .pipe(plugins.autoprefixer({
-      browsers: ['last 5 versions'],
+      browsers: ['last 7 versions'],
       cascade: false
     }))
     // uncomment,because current it does not used

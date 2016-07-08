@@ -77,7 +77,7 @@ $(document).ready(function () {
 
   // 幻灯片切换
   $("#jiaodianxinwen").owlCarousel({
-    loop: true,
+    //loop: true,
     //margin:10,
     responsiveClass: true,
     autoplay: true,

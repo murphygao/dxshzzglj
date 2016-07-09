@@ -56,9 +56,13 @@
   <table border="0" cellpadding="4" cellspacing="0" class="display" id="example">
     <thead>
     <tr>
-      <th width="8%">ID</th>
-      <th width="32%">Title</th>
-      <th width="60%">SN</th>
+      <th width="10%">序号</th>
+      <th width="15%">组织机构名称</th>
+      <th width="15%">登记证号</th>
+      <th width="15%">住所</th>
+      <th width="15%">业务主管单位</th>
+      <th width="15%">法定代表人</th>
+      <th width="15%">批准时间</th>
     </tr>
     </thead>
     <tbody>

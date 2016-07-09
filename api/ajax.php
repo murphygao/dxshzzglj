@@ -8,6 +8,7 @@ include "_config.php";
 
 $dt = new Datatables(new MySQL($config));
 
-$dt->query("Select * from dxshzzglj_ecms_xinxigongkai;");
-
+$r=$dt->query("Select * from dxshzzglj_ecms_xinxigongkai;");
+var_dump($r);
+die();
 echo $dt->generate();

@@ -8,7 +8,7 @@
           src="/node_modules/datatables.net/js/jquery.dataTables.js"></script>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
-      var oTable=$('#example').dataTable({
+      var oTable=$('#example').DataTable({
         "serverSide": true,
         "ajax": "ajax.php",
         "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],

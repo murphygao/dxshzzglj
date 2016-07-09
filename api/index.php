@@ -48,10 +48,21 @@
         },
       });
 
+      function filterColumn ( i ) {
+        oTable.column( i ).search(
+          $('#col'+i+'_filter').val(),
+          $('#col'+i+'_regex').prop('checked'),
+          $('#col'+i+'_smart').prop('checked')
+        ).draw();
+      }
+
       $('#mySelect').on('change',function(){
         var selectedValue = $(this).val();
-        oTable.fnFilter("^"+selectedValue+"$", 7, false); //Exact value, column, reg
+        oTable.column(7).search(selectedValue,0,0).draw();
+       // oTable.fnFilter("^"+selectedValue+"$", 7, false); //Exact value, column, reg
       });
+
+
     });
   </script>
 </head>

@@ -20,9 +20,9 @@
     <table border="0" cellpadding="4" cellspacing="0" class="display" id="example">
         <thead>
         <tr>
-            <th width="8%">Film ID</th>
+            <th width="8%">ID</th>
             <th width="32%">Title</th>
-            <th width="60%">Description</th>
+            <th width="60%">SN</th>
         </tr>
         </thead>
         <tbody>

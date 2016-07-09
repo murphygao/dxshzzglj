@@ -67,15 +67,13 @@ $(document).ready(function () {
     returnDefault: true
   });
 
-  if ( $( "#latest-news" ).length ) {
-    $("#latest-news").slide({
-      mainCell: "ul",
-      autoPlay: true,
-      effect: "leftMarquee",
-      interTime: 50,
-      trigger: "click"
-    });
-  }
+  $("#latest-news").slide({
+    mainCell: "ul",
+    autoPlay: true,
+    effect: "leftMarquee",
+    interTime: 50,
+    trigger: "click"
+  });
 
   // 幻灯片切换
   $("#jiaodianxinwen").owlCarousel({

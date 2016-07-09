@@ -47,6 +47,16 @@
           "thousands": "."
         },
       });
+
+      var indexOfMyCol = 2;//you want it on the third column
+      $("thead th").each( function ( i ) {
+        if(i === indexOfMyCol){
+          this.innerHTML = fnCreateSelect( oTable.fnGetColumnData(i) );
+          $('select', this).change( function () {
+            oTable.fnFilter( $(this).val(), i );
+          } );
+        }
+      } );
     });
   </script>
 </head>

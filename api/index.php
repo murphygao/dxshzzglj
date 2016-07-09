@@ -2,9 +2,9 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>DataTables example</title>
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css"/>
-    <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="/node_modules/datatables.net-dt/css/jquery.dataTables.css"/>
+    <script type="text/javascript" language="javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/node_modules/datatables.net/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function() {
             $('#example').dataTable( {

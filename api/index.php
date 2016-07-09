@@ -48,21 +48,20 @@
         },
       });
 
-      var indexOfMyCol = 2;//you want it on the third column
-      $("thead th").each( function ( i ) {
-        if(i === indexOfMyCol){
-          this.innerHTML = fnCreateSelect( oTable.fnGetColumnData(i) );
-          $('select', this).change( function () {
-            oTable.fnFilter( $(this).val(), i );
-          } );
-        }
-      } );
+      $('#mySelect').on('change',function(){
+        var selectedValue = $(this).val();
+        oTable.fnFilter("^"+selectedValue+"$", 0, true); //Exact value, column, reg
+      });
     });
   </script>
 </head>
 <body id="dt_example">
 <div id="container">
   <h1>Datatables - A simple example</h1>
+  <select id="mySelect">
+    <option value=""></option>
+    <option value="1">1</option>
+  </select>
   <table border="0" cellpadding="4" cellspacing="0" class="display" id="example">
     <thead>
     <tr>

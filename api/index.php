@@ -59,8 +59,8 @@
 <div id="container">
   <h1>Datatables - A simple example</h1>
   <select id="mySelect">
-    <option value=""></option>
-    <option value="1">1</option>
+    <option value="社会团体">社会团体</option>
+    <option value="民非">民非</option>
   </select>
   <table border="0" cellpadding="4" cellspacing="0" class="display" id="example">
     <thead>

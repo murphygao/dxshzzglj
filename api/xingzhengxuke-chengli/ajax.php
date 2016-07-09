@@ -4,11 +4,11 @@ require '../vendor/autoload.php';
 use Ozdemir\Datatables\Datatables;
 use Ozdemir\Datatables\DB\MySQL;
 
-include "_config.php";
+include "../_config.php";
 
 $dt = new Datatables(new MySQL($config));
 
-$dt->query("Select id,title,sn,zhusuo,zhuguandanwei,faren,newstime,leibie from dxshzzglj_ecms_xinxigongkai");
+$dt->query("Select id,title,sn,zhusuo,zhuguandanwei,faren,newstime,leibie from dxshzzglj_ecms_xinxigongkai where classid=45");
 
 $dt->edit('newstime', function ($data)
 {

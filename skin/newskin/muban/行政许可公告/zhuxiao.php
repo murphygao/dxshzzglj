@@ -74,13 +74,18 @@
 
     <div class="list-right">
       <div class="section-a">
-        <div class="cat-title">
-          <span><i class="fa fa-chevron-down"></i>行政许公告</span>
+        <div class="body" style="font-size: 15px;">
+          <a href="#">成立公告</a>
+          <a href="#">注销公告</a>
+          <a href="#">变更公告</a>
         </div>
       </div>
 
       <div class="section-a">
         <div class="list-right-box">
+          <div style="padding-bottom: 15px;">
+            <span style="font-size: 16.8px;padding: 0 0 10px;color: #2399ff;">注销公告</span>
+          </div>
           <div class=""  style="padding-bottom: 15px;">
             <label>请选择类别
               <select id="mySelect">
@@ -139,7 +144,7 @@
   $(document).ready(function () {
     var oTable=$('#example').DataTable({
       "serverSide": true,
-      "ajax": "/api/xingzhengxuke-chengli/ajax.php",
+      "ajax": "/api/xingzhengxuke-zhuxiao/ajax.php",
       "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
       "pageLength": 5,
       "columnDefs": [

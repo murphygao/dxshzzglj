@@ -12,9 +12,12 @@ require('../e/class/db_sql.php');
 $link=db_connect();
 $empire=new mysqlquery();
 
-$sql=$empire->query('select * from {$dbtbpre}ems_xinxigongkai');
+$sql=$empire->query('select * from dxshzzglj_ems_xinxigongkai');
 var_dump($empire->fetch($sql));
 
 while($r=$empire->fetch($sql)){
   echo $r['title'];
 }
+
+db_close();
+$empire=null;

@@ -10,10 +10,13 @@ $dt = new Datatables(new MySQL($config));
 
 $dt->query("Select id,title,sn,zhusuo,zhuguandanwei,faren,newstime,leibie from dxshzzglj_ecms_xinxigongkai");
 
-$dt->edit('newstime', function($data){
+$dt->edit('newstime', function ($data)
+{
+  return date('Y-m-d', $data['newstime']);
+});
 
-  return date('Y-m-d',$data['newstime']);
-  // return an edit link.
-  //return "<a href='user.php?id=" . $data['id'] . "'>edit</a>";
+$dt->edit('leibie', function ($data)
+{
+  return $data['leibie'] == 0 ? '社会团体' : '民非';
 });
 echo $dt->generate();

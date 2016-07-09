@@ -70,6 +70,7 @@
 
     });
   </script>
+
 </head>
 <body id="dt_example">
 <div id="container">

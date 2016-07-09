@@ -44,14 +44,6 @@ function shoucang(sTitle, sURL) {
 
 $(document).ready(function () {
 
-  $("#latest-news").slide({
-    mainCell: "ul",
-    autoPlay: true,
-    effect: "leftMarquee",
-    interTime: 50,
-    trigger: "click"
-  });
-
   // 首页头部背景图切换
   $('header').vegas({
     timer: false,
@@ -74,6 +66,16 @@ $(document).ready(function () {
     triggerTime: 0,
     returnDefault: true
   });
+
+  if ( $( "#latest-news" ).length ) {
+    $("#latest-news").slide({
+      mainCell: "ul",
+      autoPlay: true,
+      effect: "leftMarquee",
+      interTime: 50,
+      trigger: "click"
+    });
+  }
 
   // 幻灯片切换
   $("#jiaodianxinwen").owlCarousel({
@@ -150,13 +152,6 @@ $(document).ready(function () {
     }
   });
   $("#top_btn").click(function(){if(scroll=="off") return;$("html,body").animate({scrollTop: 0}, 600);});
-
-
-
-
-
-
-
 
 
 

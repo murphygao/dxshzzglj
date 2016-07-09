@@ -12,7 +12,7 @@
         "serverSide": true,
         "ajax": "ajax.php",
         "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
-        "pageLength": 4,
+        "pageLength": 5,
         "columnDefs": [
           {
             "targets": [ 7 ],
@@ -65,7 +65,6 @@
       $('#mySelect').on('change',function(){
         var selectedValue = $(this).val();
         oTable.column(7).search(selectedValue,0,0).draw();
-       // oTable.fnFilter("^"+selectedValue+"$", 7, false); //Exact value, column, reg
       });
 
 
@@ -75,6 +74,7 @@
 <body id="dt_example">
 <div id="container">
   <h1>Datatables - A simple example</h1>
+  <h3>选择类别</h3>
   <select id="mySelect">
     <option value="0">社会团体</option>
     <option value="1">民非</option>

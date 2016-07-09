@@ -18,7 +18,7 @@
             "targets": [ 7 ],
             "visible": false,
           },
-        ]
+        ],
         "language": {
           "processing": "处理中...",
           "lengthMenu": "显示 _MENU_ 项结果",

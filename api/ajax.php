@@ -15,8 +15,8 @@ $dt->edit('newstime', function ($data)
   return date('Y-m-d', $data['newstime']);
 });
 
-$dt->edit('leibie', function ($data)
+/*$dt->edit('leibie', function ($data)
 {
   return $data['leibie'] == 0 ? '社会团体' : '民非';
-});
+});*/
 echo $dt->generate();

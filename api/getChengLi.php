@@ -12,7 +12,7 @@ require('../e/class/db_sql.php');
 $link=db_connect();
 $empire=new mysqlquery();
 
-$sql=$empire->query('select * from {$dbtbpre}ecms_xinxigongkai');
+$sql=$empire->query('select * from dxshzzglj_ecms_xinxigongkai');
 var_dump($empire->fetch($sql));
 
 while($r=$empire->fetch($sql)){

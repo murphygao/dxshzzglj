@@ -12,7 +12,7 @@
         "serverSide": true,
         "ajax": "ajax.php",
         "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
-        "pageLength": 1,
+        "pageLength": 4,
         "language": {
           "processing": "处理中...",
           "lengthMenu": "显示 _MENU_ 项结果",

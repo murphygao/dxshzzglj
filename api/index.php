@@ -46,28 +46,6 @@
           "decimal": "-",
           "thousands": "."
         },
-
-        initComplete: function () {
-          var api = this.api();
-          api.columns().indexes().flatten().each( function ( i ) {
-            var column = api.column( i );
-            var select = $('<select><option value=""></option></select>')
-              .appendTo( $(column.footer()).empty() )
-              .on( 'change', function () {
-                var val = $.fn.dataTable.util.escapeRegex(
-                  $(this).val()
-                );
-                column
-                  .search( val ? '^'+val+'$' : '', true, false )
-                  .draw();
-              } );
-            column.data().unique().sort().each( function ( d, j ) {
-              select.append( '<option value="'+d+'">'+d+'</option>' )
-            } );
-          } );
-        },
-
-
       });
     });
   </script>
@@ -78,13 +56,14 @@
   <table border="0" cellpadding="4" cellspacing="0" class="display" id="example">
     <thead>
     <tr>
-      <th width="10%">序号</th>
-      <th width="15%">组织机构名称</th>
-      <th width="15%">登记证号</th>
-      <th width="15%">住所</th>
-      <th width="15%">业务主管单位</th>
-      <th width="15%">法定代表人</th>
-      <th width="15%">批准时间</th>
+      <th>序号</th>
+      <th>组织机构名称</th>
+      <th>登记证号</th>
+      <th>住所</th>
+      <th>业务主管单位</th>
+      <th>法定代表人</th>
+      <th>批准时间</th>
+      <th>类别</th>
     </tr>
     </thead>
     <tbody>

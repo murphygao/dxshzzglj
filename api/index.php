@@ -45,7 +45,7 @@
           },
           "decimal": "-",
           "thousands": "."
-        }
+        },
 
         initComplete: function () {
           var api = this.api();
@@ -65,7 +65,9 @@
               select.append( '<option value="'+d+'">'+d+'</option>' )
             } );
           } );
-        }
+        },
+
+
       });
     });
   </script>

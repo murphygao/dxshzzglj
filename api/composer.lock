@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "64354e19be20743fb51fe3139e3329be",
+    "content-hash": "597b8fea7d8491c841c1408b339299fc",
+    "packages": [
+        {
+            "name": "ozdemir/datatables",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/n1crack/Datatables.git",
+                "reference": "8d27720ec2f0fed3e5bd16030f63d4ceb7d072b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/n1crack/Datatables/zipball/8d27720ec2f0fed3e5bd16030f63d4ceb7d072b0",
+                "reference": "8d27720ec2f0fed3e5bd16030f63d4ceb7d072b0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ozdemir\\Datatables\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yusuf Özdemir",
+                    "email": "yusuf@ozdemir.be"
+                }
+            ],
+            "description": "Handles server-side processing for Datatables.",
+            "time": "2016-06-23 21:12:56"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

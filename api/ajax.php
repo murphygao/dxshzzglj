@@ -10,7 +10,7 @@ $dt = new Datatables(new MySQL($config));
 
 $dt->query("Select id,title,sn,zhusuo,zhuguandanwei,faren,newstime from dxshzzglj_ecms_xinxigongkai");
 
-$dt->edit('id', function($data){
+$dt->edit('newstime', function($data){
 
   return date('Y-m-d',$data['newstime']);
   // return an edit link.

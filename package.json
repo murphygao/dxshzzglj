@@ -19,6 +19,8 @@
     "animate.css": "^3.5.1",
     "bootstrap": "^3.3.6",
     "bootstrap-sass": "^3.3.6",
+    "datatables.net": "^1.10.12",
+    "datatables.net-dt": "^1.10.12",
     "font-awesome": "^4.5.0",
     "jquery": "^2.2.2",
     "jquery-menu-aim": "^1.1.0",

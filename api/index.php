@@ -50,7 +50,7 @@
 
       $('#mySelect').on('change',function(){
         var selectedValue = $(this).val();
-        oTable.fnFilter("^"+selectedValue+"$", 0, true); //Exact value, column, reg
+        oTable.fnFilter("^"+selectedValue+"$", 7, true); //Exact value, column, reg
       });
     });
   </script>

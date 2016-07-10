@@ -73,7 +73,7 @@
     </div>
     <div class="gongzuodongtai">
       <div class="box-hd">
-        <span class="title">工作动态</span><a href="#" class="more">更多 <i class="fa fa-angle-double-right"></i></a>
+        <span class="title">工作动态</span>
       </div>
       <div class="box-bd">
         <ul>
@@ -153,27 +153,42 @@
           <div class="hd">
             <ul>
               <!--行政许可-->
-              <li class="menu menu-a"><span><?=$class_r[13]['classname']?></span></li>
+              <li class="menu menu-a"><span><?=$class_r[30]['classname']?></span></li>
               <!-- 查处公告-->
-              <li class="menu menu-b"><span><?=$class_r[14]['classname']?></span></li>
+              <li class="menu menu-b"><span><?=$class_r[31]['classname']?></span></li>
               <!--年检结果-->
-              <li class="menu menu-c"><span><?=$class_r[16]['classname']?></span></li>
+              <li class="menu menu-c"><span><?=$class_r[32]['classname']?></span></li>
             </ul>
           </div>
           <div class="bd">
             <!--行政许可-->
             <ul>
-              [e:loop={13,10,0,0}]
-              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
-              </li>
+              [e:loop={'select * from [!db.pre!]ecms_xinxigongkai where classid in (45,46) order by newstime DESC
+              limit 10',20,24,0}]
+              <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-angle-right"></i>
+                <?php
+                  if($bqr['classid']==45){
+                  ?>
+                <?=$bqr['title']?><span style="color:#e6e6e6;padding-left: 5px">成立登记</span>
+                <?php
+                  }else if($bqr['classid']==46){
+                ?>
+                <?=$bqr['title']?><span style="color:#e6e6e6;padding-left: 5px">注销登记</span>
+                <?php
+                  }
+                ?>
+              </a></li>
               [/e:loop]
-              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=13" target="_blank">更多 <i
-                class="fa fa-angle-double-right"></i></a></div>
+              <div class="more">
+                <a href="[!--news.url--]html/xingzhengxuke-chengli.php" target="_blank">查询更多
+                  <i class="fa fa-angle-double-right"></i>
+                </a>
+              </div>
             </ul>
 
             <!--查处公告-->
             <ul>
-              [e:loop={14,10,0,0}]
+              [e:loop={31,10,0,0}]
               <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
               </li>
               [/e:loop]
@@ -183,7 +198,7 @@
 
             <!--年检结果-->
             <ul>
-              [e:loop={16,10,0,0}]
+              [e:loop={32,10,0,0}]
               <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
               </li>
               [/e:loop]
@@ -200,13 +215,13 @@
     <div class="chaxunfuwu">
       <div class="box-hd">
         <span class="title"><i class="fa fa-chevron-down"></i>
-          <?=$class_r[17]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=17" class="more"
+          <?=$class_r[37]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=17" class="more"
                                                   target="_blank">更多 <i
         class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd clearfix">
         <ul>
-          [e:loop={17,6,0,0}]
+          [e:loop={37,6,0,0}]
           <li>
             <a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-double-right"></i><?=$bqr[title]?></a>
           </li>
@@ -222,17 +237,17 @@
         <span class="title">网上办事大厅</span>
       </div>
       <div class="box-bd">
-        <a href="[!--news.url--]e/public/ClassUrl/?classid=23" target="_blank">
+        <a href="[!--news.url--]e/public/ClassUrl/?classid=39" target="_blank">
           <img src="/skin/newskin/frontend/dist/images/wsbs_b1.gif" alt="">
 
           <h3>办事指南</h3>
         </a>
-        <a href="[!--news.url--]e/public/ClassUrl/?classid=24" target="_blank">
+        <a href="[!--news.url--]e/public/ClassUrl/?classid=40" target="_blank">
           <img src="/skin/newskin/frontend/dist/images/wsbs_b3.gif" alt="">
 
           <h3>表格下载</h3>
         </a>
-        <a href="[!--news.url--]e/public/ClassUrl/?classid=25" target="_blank">
+        <a href="[!--news.url--]e/public/ClassUrl/?classid=41" target="_blank">
           <img src="/skin/newskin/frontend/dist/images/wsbs_b4.gif" alt="">
 
           <h3>年检材料</h3>
@@ -241,13 +256,13 @@
     </div>
     <div class="gongshigonggao">
       <div class="box-hd">
-        <span class="title"><?=$class_r[21]['classname']?></span>
+        <span class="title"><?=$class_r[29]['classname']?></span>
         <a href="[!--news.url--]e/public/ClassUrl/?classid=21" class="more" target="_blank">更多 <i
           class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd">
         <ul>
-          [e:loop={21,10,0,0}]
+          [e:loop={29,10,0,0}]
           <li>
             <a href="<?=$bqsr[titleurl]?>" target="_blank"><span class="cat">[公告]</span><?=$bqr[title]?></a>
             <span class="time">[<?=date('m-d',$bqr[newstime])?>]</span>
@@ -264,11 +279,11 @@
   <div class="news-images">
     <div class="news-images-header">
       <a href="[!--news.url--]e/public/ClassUrl/?classid=10" target="_blank"><i
-        class="fa fa-image fa-dxrd"></i><?=$class_r[10]['classname']?></a>
+        class="fa fa-image fa-dxrd"></i>图片新闻</a>
     </div>
     <div class="bd">
       <ul>
-        [e:loop={10,10,0,1}]
+        [e:loop={0,10,3,1}]
         <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><img src="<?=$bqr[titlepic]?>" alt="<?=$bqr[title]?>"></a>
         </li>
         [/e:loop]

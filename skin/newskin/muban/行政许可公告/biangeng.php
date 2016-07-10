@@ -84,7 +84,7 @@
       <div class="section-a">
         <div class="list-right-box">
           <div style="padding-bottom: 15px;">
-            <span style="font-size: 16.8px;padding: 0 0 10px;color: #2399ff;">注销公告</span>
+            <span style="font-size: 16.8px;padding: 0 0 10px;color: #2399ff;">变更公告</span>
           </div>
           <div class=""  style="padding-bottom: 15px;">
             <label>请选择类别
@@ -99,13 +99,11 @@
               <thead>
               <tr>
                 <th>序号</th>
-                <th>组织机构名称</th>
-                <th>登记证号</th>
-                <th>住所</th>
-                <th>业务主管单位</th>
-                <th>法定代表人</th>
+                <th>组织名称</th>
+                <th>类型</th>
+                <th>变更前</th>
+                <th>变更后</th>
                 <th>批准时间</th>
-                <th>类别</th>
               </tr>
               </thead>
               <tbody>
@@ -144,7 +142,7 @@
   $(document).ready(function () {
     var oTable=$('#example').DataTable({
       "serverSide": true,
-      "ajax": "/api/xingzhengxuke-zhuxiao/ajax.php",
+      "ajax": "/api/xingzhengxuke-biangeng/ajax.php",
       "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
       "pageLength": 5,
       "columnDefs": [

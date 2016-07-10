@@ -75,8 +75,8 @@
     <div class="list-right">
       <div class="section-a">
         <div class="body" style="font-size: 15px;">
-          <a href="#">成立公告</a>
-          <a href="#">注销公告</a>
+          <a href="[!--news.url--]html/xingzhengxuke-chengli.php">成立公告</a>
+          <a href="[!--news.url--]html/xingzhengxuke-zhuxiao.php">注销公告</a>
           <a href="#">变更公告</a>
         </div>
       </div>

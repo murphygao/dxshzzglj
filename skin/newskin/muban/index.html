@@ -153,18 +153,19 @@
           <div class="hd">
             <ul>
               <!--行政许可-->
-              <li class="menu menu-a"><span><?=$class_r[30]['classname']?></span></li>
-              <!-- 查处公告-->
-              <li class="menu menu-b"><span><?=$class_r[31]['classname']?></span></li>
-              <!--年检结果-->
-              <li class="menu menu-c"><span><?=$class_r[32]['classname']?></span></li>
+              <li class="menu menu-a"><span><?=$class_r[44]['classname']?></span></li>
+              <!-- 年检结果-->
+              <li class="menu menu-b"><span>年检结果</span></li>
+              <!--查出公告-->
+              <li class="menu menu-c"><span><?=$class_r[49]['classname']?></span></li>
             </ul>
           </div>
           <div class="bd">
             <!--行政许可-->
             <ul>
+              <!--成立注销公告-->
               [e:loop={'select * from [!db.pre!]ecms_xinxigongkai where classid in (45,46) order by newstime DESC
-              limit 10',20,24,0}]
+              limit 7',20,24,0}]
               <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-angle-right"></i>
                 <?php
                   if($bqr['classid']==45){
@@ -179,6 +180,14 @@
                 ?>
               </a></li>
               [/e:loop]
+
+              <!--变更公告-->
+              [e:loop={'select * from [!db.pre!]ecms_xinxigongkai2 where classid=48 order by newstime DESC
+              limit 3',20,24,0}]
+              <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-angle-right"></i>
+                <?=$bqr['title']?><span style="color:#e6e6e6;padding-left: 5px">变更登记</span>
+              </a></li>
+              [/e:loop]
               <div class="more">
                 <a href="[!--news.url--]html/xingzhengxuke-chengli.php" target="_blank">查询更多
                   <i class="fa fa-angle-double-right"></i>
@@ -186,7 +195,7 @@
               </div>
             </ul>
 
-            <!--查处公告-->
+            <!--年检结果-->
             <ul>
               [e:loop={31,10,0,0}]
               <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
@@ -196,13 +205,13 @@
                 class="fa fa-angle-double-right"></i></a></div>
             </ul>
 
-            <!--年检结果-->
+            <!--查出公告-->
             <ul>
-              [e:loop={32,10,0,0}]
+              [e:loop={49,10,0,0}]
               <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
               </li>
               [/e:loop]
-              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=16" target="_blank">更多 <i
+              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=49" target="_blank">更多 <i
                 class="fa fa-angle-double-right"></i></a></div>
             </ul>
           </div>
@@ -211,11 +220,11 @@
       </div>
     </div>
 
-    <!--区县动态-->
+    <!--社会组织党建-->
     <div class="chaxunfuwu">
       <div class="box-hd">
         <span class="title"><i class="fa fa-chevron-down"></i>
-          <?=$class_r[37]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=17" class="more"
+          <?=$class_r[37]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=37" class="more"
                                                   target="_blank">更多 <i
         class="fa fa-angle-double-right"></i></a>
       </div>

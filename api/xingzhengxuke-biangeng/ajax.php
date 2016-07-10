@@ -8,7 +8,8 @@ include "../_config.php";
 
 $dt = new Datatables(new MySQL($config));
 
-$dt->query("Select id,title,leixin,biangengqian,biangenghou,newstime from dxshzzglj_ecms_xinxigongkai2 order by newstime DESC");
+$dt->query("Select id,title,biangengleixin,biangengqian,biangenghou,newstime from dxshzzglj_ecms_xinxigongkai2 order by newstime
+DESC");
 
 
 $dt->edit('newstime', function ($data)

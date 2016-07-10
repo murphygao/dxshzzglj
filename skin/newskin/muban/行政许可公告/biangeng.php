@@ -100,7 +100,7 @@
               <tr>
                 <th>序号</th>
                 <th>组织名称</th>
-                <th>类型</th>
+                <th>变更类型</th>
                 <th>变更前</th>
                 <th>变更后</th>
                 <th>批准时间</th>
@@ -143,12 +143,12 @@
       "ajax": "/api/xingzhengxuke-biangeng/ajax.php",
       "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
       "pageLength": 5,
-/*      "columnDefs": [
+      "columnDefs": [
         {
           "targets": [ 6 ],
           "visible": false,
         },
-      ],*/
+      ],
       "language": {
         "processing": "处理中...",
         "lengthMenu": "显示 _MENU_ 项结果",
@@ -186,7 +186,7 @@
 
     $('#mySelect').on('change',function(){
       var selectedValue = $(this).val();
-      oTable.column(7).search(selectedValue,0,0).draw();
+      oTable.column(6).search(selectedValue,0,0).draw();
     });
 
 

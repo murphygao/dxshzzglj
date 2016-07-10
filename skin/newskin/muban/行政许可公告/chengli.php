@@ -77,7 +77,7 @@
         <div class="body" style="font-size: 15px;">
           <a href="[!--news.url--]html/xingzhengxuke-chengli.php">成立公告</a>
           <a href="[!--news.url--]html/xingzhengxuke-zhuxiao.php">注销公告</a>
-          <a href="[!--news.url--]html/xingzhengxuke-bianggeng.php">注销公告</a>
+          <a href="[!--news.url--]html/xingzhengxuke-biangeng.php">变更公告</a>
         </div>
       </div>
 

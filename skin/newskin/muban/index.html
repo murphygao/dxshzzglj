@@ -170,11 +170,11 @@
                 <?php
                   if($bqr['classid']==45){
                   ?>
-                <?=$bqr['title']?><span style="color:#e6e6e6;padding-left: 5px">成立登记</span>
+                <?=$bqr['title']?><span style="color:#ddd;padding-left: 5px">成立登记</span>
                 <?php
                   }else if($bqr['classid']==46){
                 ?>
-                <?=$bqr['title']?><span style="color:#e6e6e6;padding-left: 5px">注销登记</span>
+                <?=$bqr['title']?><span style="color:#ddd;padding-left: 5px">注销登记</span>
                 <?php
                   }
                 ?>
@@ -189,7 +189,7 @@
               </a></li>
               [/e:loop]
               <div class="more">
-                <a href="[!--news.url--]html/xingzhengxuke-chengli.php" target="_blank">查询更多
+                <a href="[!--news.url--]html/xingzhengxuke-chengli.php" target="_blank">查询
                   <i class="fa fa-angle-double-right"></i>
                 </a>
               </div>
@@ -197,11 +197,15 @@
 
             <!--年检结果-->
             <ul>
-              [e:loop={31,10,0,0}]
-              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
-              </li>
+              [e:loop={'select * from [!db.pre!]ecms_xinxigongkai3 where classid=50 order by newstime DESC
+              limit 10',20,24,0}]
+              <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-angle-right"></i>
+                <?= trim(esub($bqr[title],16,'...'))?>
+                <span style="color:red;padding-left: 2px;font-size: 12px;"><?=$bqr['pici']?>年</span>
+                <span style="color:red;padding-left: 2px;font-size: 12px;"><?=$bqr['jieguo']?></span>
+              </a></li>
               [/e:loop]
-              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=14" target="_blank">更多 <i
+              <div class="more"><a href="[!--news.url--]html/nianjianjieguo.php" target="_blank">查询 <i
                 class="fa fa-angle-double-right"></i></a></div>
             </ul>
 

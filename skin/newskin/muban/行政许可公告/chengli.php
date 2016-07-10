@@ -75,9 +75,15 @@
     <div class="list-right">
       <div class="section-a">
         <div class="body" style="font-size: 15px;">
+          <span>行政许可 : </span>
           <a href="[!--news.url--]html/xingzhengxuke-chengli.php">成立公告</a>
           <a href="[!--news.url--]html/xingzhengxuke-zhuxiao.php">注销公告</a>
           <a href="[!--news.url--]html/xingzhengxuke-biangeng.php">变更公告</a>
+        </div>
+
+        <div class="body" style="font-size: 15px;margin-top:15px;">
+          <span>年检结果查询 : </span>
+          <a href="[!--news.url--]html/nianjianjieguo.php">年检结果</a>
         </div>
       </div>
 

@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="[!--news.url--]node_modules/animate.css/animate.min.css">
 
   <!-- owl carousel -->
-  <link rel="stylesheet" href="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
+  <link rel="stylesheet"
+        href="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
 
   <!--vegas.css-->
   <link rel="stylesheet" href="[!--news.url--]node_modules/vegas/dist/vegas.min.css">
@@ -57,17 +58,18 @@
   <div class="second-list clearfix">
     <div class="list-left">
       <ul class="menu">
-        [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid='$GLOBALS[navclassid]' order by myorder,classid
+        [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid='$GLOBALS[navclassid]' order by
+        myorder,classid
         desc",0,24,0}]
-        <?php $classurl=sys_ReturnBqClassname($bqr,9);?>
-        <li><a href="<?=$classurl?>"><?=$bqr[classname]?></a></li>
+        <?php $classurl = sys_ReturnBqClassname($bqr, 9); ?>
+        <li><a href="<?= $classurl ?>"><?= $bqr[classname] ?></a></li>
         [/e:loop]
       </ul>
       <ul class="others margin-top-15">
         <div class="title">热点排行</div>
 
         [e:loop={0,5,4,0}]
-        <li><a href="<?=$bqsr['titleurl']?>" target="_blank"><i><?=$bqno?></i><?=$bqr['title']?></a></li>
+        <li><a href="<?= $bqsr['titleurl'] ?>" target="_blank"><i><?= $bqno ?></i><?= $bqr['title'] ?></a></li>
         [/e:loop]
       </ul>
     </div>
@@ -90,9 +92,9 @@
       <div class="section-a">
         <div class="list-right-box">
           <div style="padding-bottom: 15px;">
-            <span style="font-size: 16.8px;padding: 0 0 10px;color: #2399ff;">变更公告</span>
+            <span style="font-size: 16.8px;padding: 0 0 10px;color: #2399ff;">年检结果</span>
           </div>
-          <div class=""  style="padding-bottom: 15px;">
+          <div class="" style="padding-bottom: 15px;">
             <label>请选择类别
               <select id="mySelect">
                 <option value="0">社会团体</option>
@@ -106,10 +108,10 @@
               <tr>
                 <th>序号</th>
                 <th>组织名称</th>
-                <th>变更类型</th>
-                <th>变更前</th>
-                <th>变更后</th>
-                <th>批准时间</th>
+                <th>登记证号</th>
+                <th>业务主管单位</th>
+                <th>批 次</th>
+                <th>年检结果</th>
                 <th>类别</th>
               </tr>
               </thead>
@@ -144,14 +146,14 @@
 
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
-    var oTable=$('#example').DataTable({
+    var oTable = $('#example').DataTable({
       "serverSide": true,
-      "ajax": "/api/xingzhengxuke-biangeng/ajax.php",
+      "ajax": "/api/nianjianjieguo/ajax.php",
       "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
       "pageLength": 5,
       "columnDefs": [
         {
-          "targets": [ 6 ],
+          "targets": [6],
           "visible": false,
         },
       ],
@@ -190,9 +192,9 @@
       },
     });
 
-    $('#mySelect').on('change',function(){
+    $('#mySelect').on('change', function () {
       var selectedValue = $(this).val();
-      oTable.column(6).search(selectedValue,0,0).draw();
+      oTable.column(6).search(selectedValue, 0, 0).draw();
     });
 
 

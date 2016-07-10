@@ -104,6 +104,7 @@
                 <th>变更前</th>
                 <th>变更后</th>
                 <th>批准时间</th>
+                <th>类别</th>
               </tr>
               </thead>
               <tbody>
@@ -142,12 +143,12 @@
       "ajax": "/api/xingzhengxuke-biangeng/ajax.php",
       "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
       "pageLength": 5,
-/*      "columnDefs": [
+      "columnDefs": [
         {
-          "targets": [ 7 ],
+          "targets": [ 6 ],
           "visible": false,
         },
-      ],*/
+      ],
       "language": {
         "processing": "处理中...",
         "lengthMenu": "显示 _MENU_ 项结果",

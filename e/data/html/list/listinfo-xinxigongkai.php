@@ -288,9 +288,9 @@ function PushInfoToZt(form)
       <td height="25"> <div align="center">
           <?=$r[username]?>
         </div></td>
-      <td height="25" title="<? echo"增加时间：".$truetime."\r\n最后修改：".$lastdotime;?>"> <div align="center">
-		  <input name="newstime[]" type="text" value="<?=date("Y-m-d H:i:s",$r[newstime])?>" size="20">
-        </div></td>
+<!--      <td height="25" title="<?/* echo"增加时间：".$truetime."\r\n最后修改：".$lastdotime;*/?>"> <div align="center">
+		  <input name="newstime[]" type="text" value="<?/*=date("Y-m-d H:i:s",$r[newstime])*/?>" size="20">
+        </div></td>-->
       <td height="25"> <div align="center"> <a title="下载次数:<?=$r[totaldown]?>">
           <?=$r[onclick]?>
           </a> </div></td>

@@ -91,7 +91,6 @@
               <tr>
                 <th>序号</th>
                 <th>组织机构名称</th>
-                <th>登记证号</th>
                 <th>	统一社会信用代码</th>
                 <th>住所</th>
                 <th>业务主管单位</th>
@@ -141,7 +140,7 @@
       "pageLength": 5,
       "columnDefs": [
         {
-          "targets": [ 8 ],
+          "targets": [ 7 ],
           "visible": false,
         },
       ],
@@ -182,7 +181,7 @@
 
     $('#mySelect').on('change',function(){
       var selectedValue = $(this).val();
-      oTable.column(8).search(selectedValue,0,0).draw();
+      oTable.column(7).search(selectedValue,0,0).draw();
     });
 
 

@@ -55,30 +55,13 @@
 
 <div class="wrap margin-top-15">
   <div class="second-list clearfix">
-    <div class="list-left">
-      <ul class="menu">
-        [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid='$GLOBALS[navclassid]' order by myorder,classid
-        desc",0,24,0}]
-        <?php $classurl=sys_ReturnBqClassname($bqr,9);?>
-        <li><a href="<?=$classurl?>"><?=$bqr[classname]?></a></li>
-        [/e:loop]
-      </ul>
-      <ul class="others margin-top-15">
-        <div class="title">热点排行</div>
-
-        [e:loop={0,5,4,0}]
-        <li><a href="<?=$bqsr['titleurl']?>" target="_blank"><i><?=$bqno?></i><?=$bqr['title']?></a></li>
-        [/e:loop]
-      </ul>
-    </div>
-
-    <div class="list-right">
+    <div class="list-right" style="width: 1000px;">
       <div class="section-a">
         <div class="body" style="font-size: 15px;">
           <span>行政许可 : </span>
-          <a href="[!--news.url--]html/xingzhengxuke-chengli.php">成立公告</a>
-          <a href="[!--news.url--]html/xingzhengxuke-zhuxiao.php">注销公告</a>
-          <a href="[!--news.url--]html/xingzhengxuke-biangeng.php">变更公告</a>
+          <a href="[!--news.url--]html/xingzhengxuke-chengli.php">登记成立</a>
+          <a href="[!--news.url--]html/xingzhengxuke-zhuxiao.php">注销登记</a>
+          <a href="[!--news.url--]html/xingzhengxuke-biangeng.php">变更登记</a>
         </div>
 
         <div class="body" style="font-size: 15px;margin-top:15px;">
@@ -90,13 +73,15 @@
       <div class="section-a">
         <div class="list-right-box">
           <div style="padding-bottom: 15px;">
-            <span style="font-size: 16.8px;padding: 0 0 10px;color: #2399ff;">注销公告</span>
+            <span style="font-size: 16.8px;padding: 0 0 10px;color: #2399ff;">注销登记</span>
           </div>
           <div class=""  style="padding-bottom: 15px;">
             <label>请选择类别
               <select id="mySelect">
+                <option value="">请选择类别</option>
                 <option value="0">社会团体</option>
-                <option value="1">民非</option>
+                <option value="1">民办非企业单位</option>
+                <option value="2">基金会</option>
               </select>
             </label>
           </div>
@@ -107,6 +92,7 @@
                 <th>序号</th>
                 <th>组织机构名称</th>
                 <th>登记证号</th>
+                <th>	统一社会信用代码</th>
                 <th>住所</th>
                 <th>业务主管单位</th>
                 <th>法定代表人</th>
@@ -155,7 +141,7 @@
       "pageLength": 5,
       "columnDefs": [
         {
-          "targets": [ 7 ],
+          "targets": [ 8 ],
           "visible": false,
         },
       ],
@@ -196,7 +182,7 @@
 
     $('#mySelect').on('change',function(){
       var selectedValue = $(this).val();
-      oTable.column(7).search(selectedValue,0,0).draw();
+      oTable.column(8).search(selectedValue,0,0).draw();
     });
 
 

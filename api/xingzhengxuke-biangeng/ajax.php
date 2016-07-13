@@ -34,7 +34,6 @@ $dt->edit('biangengleixin', function ($data)
     case 0:$output = '法定代表人';break;
     case 1: $output='住所';break;
     case 2:$output='名称';break;
-    case 3:$output='注册资金';break;
     default:$output='未填写';
   }
   return $output;

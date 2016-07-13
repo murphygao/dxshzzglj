@@ -15,15 +15,8 @@ include "../_config.php";
 
 $dt = new Datatables(new MySQL($config));
 
-$dt->query("Select id,title,biangengleixin,biangengqian,biangenghou,newstime,leibie from dxshzzglj_ecms_xinxigongkai2 order by
-newstime
-DESC");
-
-
-$dt->edit('newstime', function ($data)
-{
-  return date('Y-m-d', $data['newstime']);
-});
+$dt->query("Select id,title,biangengleixin,biangengqian,biangenghou,pizhuntime,leibie from dxshzzglj_ecms_xinxigongkai2 order by
+id ASC");
 
 $dt->edit('biangengleixin', function ($data)
 {

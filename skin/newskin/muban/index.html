@@ -77,40 +77,20 @@
       </div>
       <div class="box-bd">
         <ul>
-          [e:loop={0,1,3,0,'firsttitle=1','newstime DESC'}]
+          [e:loop={0,6,3,0,'firsttitle=1','newstime DESC'}]
+
+          <?php
+           if($bqno== 1){
+          ?>
           <li><a href="<?=$bqsr[titleurl]?>" target="_blank">
             <h3><?=$bqr[title]?></h3>
 
             <p><?=$bqr[smalltext]?></p>
           </a>
           </li>
-          [/e:loop]
-
-          [e:loop={0,1,3,0,'firsttitle=2','newstime DESC'}]
-          <li>
-            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
-            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
-          </li>
-          [/e:loop]
-          [e:loop={0,1,3,0,'firsttitle=3','newstime DESC'}]
-          <li>
-            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
-            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
-          </li>
-          [/e:loop]
-          [e:loop={0,1,3,0,'firsttitle=4','newstime DESC'}]
-          <li>
-            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
-            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
-          </li>
-          [/e:loop]
-          [e:loop={0,1,3,0,'firsttitle=5','newstime DESC'}]
-          <li>
-            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
-            <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
-          </li>
-          [/e:loop]
-          [e:loop={0,1,3,0,'firsttitle=6','newstime DESC'}]
+          <?php
+           }
+           ?>
           <li>
             <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
             <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
@@ -164,17 +144,19 @@
             <!--行政许可-->
             <ul>
               <!--成立注销公告-->
-              [e:loop={'select * from [!db.pre!]ecms_xinxigongkai where classid in (45,46) order by newstime DESC
+              [e:loop={'select * from [!db.pre!]ecms_xinxigongkai where classid in (45,46) order by id DESC
               limit 7',20,24,0}]
               <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-angle-right"></i>
                 <?php
                   if($bqr['classid']==45){
                   ?>
-                <?=$bqr['title']?><span style="color:#ddd;padding-left: 5px">成立登记</span>
+                <?= trim(esub($bqr[title],16,'...'))?>
+                <span style="color:#ddd;padding-left: 5px">登记成立</span>
                 <?php
                   }else if($bqr['classid']==46){
                 ?>
-                <?=$bqr['title']?><span style="color:#ddd;padding-left: 5px">注销登记</span>
+                <?= trim(esub($bqr[title],16,'...'))?>
+                <span style="color:#ddd;padding-left: 5px">注销登记</span>
                 <?php
                   }
                 ?>
@@ -182,10 +164,11 @@
               [/e:loop]
 
               <!--变更公告-->
-              [e:loop={'select * from [!db.pre!]ecms_xinxigongkai2 where classid=48 order by newstime DESC
+              [e:loop={'select * from [!db.pre!]ecms_xinxigongkai2 where classid=48 order by id DESC
               limit 3',20,24,0}]
               <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-angle-right"></i>
-                <?=$bqr['title']?><span style="color:#e6e6e6;padding-left: 5px">变更登记</span>
+                <?= trim(esub($bqr[title],16,'...'))?>
+                <span style="color:#e6e6e6;padding-left: 5px">变更登记</span>
               </a></li>
               [/e:loop]
               <div class="more">

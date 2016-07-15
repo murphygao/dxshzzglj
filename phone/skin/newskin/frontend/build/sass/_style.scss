@@ -1,0 +1,67 @@
+/*
+  * recommend add your cusstom sass code in here
+  */
+
+
+
+body {
+  font: $base_font;
+  background: $base_bg;
+  font-size: $base_font_size;
+  color: $base_font_color;
+  min-width: 1000px;
+}
+
+.wrap {
+  width: $base_width;
+  margin: 0 auto;
+}
+
+.btn-buuug7-a {
+  border-radius: 0;
+  border: 1px solid $base_theme_color;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.btn-buuug7-b {
+  border-radius: 0;
+  padding: 4px 12px;
+  color: #fff;
+  background-color: $base_theme_color;
+  border-color: $base_theme_color;
+}
+
+.section-one {
+  //margin-top: 15px;
+  padding: 15px;
+  border: 1px solid $base_theme_color;
+  background: #fff;
+}
+
+.breadcrumb {
+  padding: 8px 15px;
+  list-style: none;
+  background-color: darken(#FFF, 0%);
+  font-size: 1.2*$base_font_size;
+  li {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+    color: $base_theme_color;
+  }
+  > li + li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+  }
+}
+
+
+.fa-padding-right-5{
+  padding-right:5px;
+}
+

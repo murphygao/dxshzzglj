@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+  <!--animate.css-->
+  <link rel="stylesheet" href="/skin/newskin/frontend/dist/plugins/animatecss/animate.min.css">
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="/skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
+
+  <link rel="stylesheet" href="/node_modules/vegas/dist/vegas.min.css">
+
+  <link rel="stylesheet" href="/skin/newskin/frontend/dist/css/{{theme}}/app.css">
+<head>
+<body>
+
+
+<!--topbar-->
+<div class="topbar">
+  <div class="main clearfix">
+    <div class="left">定西社会组织欢迎您 !</div>
+    <div class="right">
+      <a href="javascript:void(0);">手机版</a> |
+      <a href="javascript:void(0);" onclick="SetHome(this,window.location)">设为首页</a> |
+      <a href="javascript:void(0);" onclick="shoucang(window.location,document.title)">加入收藏</a>
+
+    </div>
+
+    <div class="mid">
+      <form name="searchform" method="post" action="/e/search/index.php" target="_blank">
+        站内搜索 : <input type="search" name="keyboard" size="28">
+        <select name="show" style="display: none">
+          <option value="title">标题</option>
+        </select>
+        <button type="submit" style="border: none;background: transparent"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="main">
+    <div class="logo"></div>
+    <div class="left">
+      <h1>
+        定西社会组织
+      </h1>
+
+      <p>
+        DXSH.GOV.CN
+      </p>
+    </div>
+
+    <div class="right">
+      <div class="item">
+        <a href="#" class="active">综合</a><a href="#">办事事项</a><a href="#">政策解读</a><a href="#">下载</a>
+      </div>
+<!--      <div class="search">
+        <form action="">
+          <input type="search" name="search" placeholder="输入关键字进行搜索">
+          <input type="submit" value="搜索">
+        </form>
+      </div>-->
+    </div>
+  </div>
+</header>
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>[!--pagetitle--]</title>
+  <meta name="keywords" content="[!--pagekey--]"/>
+  <meta name="description" content="[!--pagedes--]"/>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <!--font-awesome-->
+  <link rel="stylesheet" href="[!--news.url--]node_modules/font-awesome/css/font-awesome.min.css">
+
+  <!--animate.css-->
+  <link rel="stylesheet" href="[!--news.url--]node_modules/animate.css/animate.min.css">
+
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
+
+  <link rel="stylesheet" href="[!--news.url--]node_modules/vegas/dist/vegas.min.css">
+
+  <!--app.css-->
+  <link rel="stylesheet" href="[!--news.url--]skin/newskin/frontend/dist/css/default/app.css">
+
+</head>
+
+<body>
+
+[!--temp.dxshzzglj-header--]
+[!--temp.dxshzzglj-nav--]
+
+<!--breadcrumb-->
+<div class="wrap margin-top-15">
+  <ol class="breadcrumb">
+    [!--newsnav--]
+  </ol>
+</div>
+
+<div class="wrap margin-top-15">
+  <div class="second-list clearfix">
+    <div class="list-left">
+      <ul class="menu">
+        [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid='$GLOBALS[navclassid]' order by myorder,classid
+        desc",0,24,0}]
+        <?php $classurl=sys_ReturnBqClassname($bqr,9);?>
+        <li><a href="<?=$classurl?>"><?=$bqr[classname]?></a></li>
+        [/e:loop]
+      </ul>
+      <ul class="others margin-top-15">
+        <div class="title">热点排行</div>
+
+        [e:loop={0,5,4,0}]
+        <li><a href="<?=$bqsr['titleurl']?>" target="_blank"><i><?=$bqno?></i><?=$bqr['title']?></a></li>
+        [/e:loop]
+      </ul>
+    </div>
+
+    <div class="list-right">
+      <div class="section-a">
+        <div class="cat-title">
+          <span><i class="fa fa-chevron-down"></i>[!--class.name--]</span>
+        </div>
+      </div>
+      [listsonclass]'selfinfo',5,0,0,0,13,0,0,0,32,0,0[/listsonclass]
+    </div>
+  </div>
+</div>
+
+[!--temp.dxshzzglj-footer--]
+<script src="[!--news.url--]node_modules/jquery/dist/jquery.min.js"></script>
+<script src="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/owl.carousel.min.js"></script>
+<script src="[!--news.url--]skin/newskin/frontend/dist/plugins/jquery.SuperSlider/jquery.SuperSlide.2.1.1.js"></script>
+<script src="[!--news.url--]node_modules/vegas/dist/vegas.min.js"></script>
+<script src="[!--news.url--]skin/newskin/frontend/dist/js/app.js"></script>
+</body>
+</html>

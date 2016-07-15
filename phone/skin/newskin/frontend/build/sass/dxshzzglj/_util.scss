@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* some useful css utility*/
+
+.clearfix:before,
+.clearfix:after{
+  display: table;
+  content: " ";
+}
+
+.clearfix:after{
+  clear: both;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

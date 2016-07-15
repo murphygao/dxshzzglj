@@ -1,0 +1,43 @@
+<!--导航-->
+<nav>
+  <ul class="clearfix" id="nav">
+    <li class="nli on">
+      <h3><a href="[!--news.url--]">首页</a></h3>
+    </li>
+
+
+    [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid=0 and showclass=0 order by myorder,classid
+    asc",0,24,0}]
+    <?php $classurl=sys_ReturnBqClassname($bqr,9);?>
+    <li class="nli">
+      <h3><a href="<?= $classurl;?>"><?=$bqr[classname]?></a></h3>
+      <ul class="sub">
+        <?php
+        $sql=$empire->query("select classid,classname,classpath  from {$dbtbpre}enewsclass where bclassid='$bqr[classid]' order by myorder,classid
+        asc limit 10");
+        while($info=$empire->fetch($sql))
+        {
+        ?>
+        <li><a href="[!--news.url--]e/public/ClassUrl/?classid=<?=$info[classid]?>"><?=$info[classname]?></a></li>
+        <?
+        }
+        ?>
+      </ul>
+    </li>
+    <?php
+     if($bqr[classname] == '通知公告'){
+     ?>
+    <li class="nli">
+      <h3><a href="javascript:void(0);">信息公开</a></h3>
+      <ul class="sub">
+        <li><a href="[!--news.url--]html/xingzhengxuke-chengli.php">行政许可</a></li>
+        <li><a href="[!--news.url--]html/nianjianjieguo.php">年检结果</a></li>
+        <li><a href="[!--news.url--]e/public/ClassUrl/?classid=49">查处公告</a></li>
+      </ul>
+    </li>
+    <?php
+     }
+    ?>
+    [/e:loop]
+  </ul>
+</nav>

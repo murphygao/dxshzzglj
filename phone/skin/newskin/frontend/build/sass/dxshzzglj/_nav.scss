@@ -1,0 +1,66 @@
+/* nav scss */
+
+nav {
+
+  width: 1000px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  background: $base_theme_color;
+  //border-top:1px solid $base_theme_color;
+  ul {
+    width: $base_width;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    //overflow: hidden;
+
+  }
+  ul li.nli {
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    &:hover {
+      background: darken($base_theme_color, 15%);
+    }
+    h3 a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      text-decoration: none;
+      padding: 0 14px;
+      color: #fff;
+      font-size: 1.4*$base_font_size;
+    }
+  }
+  .sub {
+    z-index: 9999;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    //background: $base_theme_color;
+    width: 100%;
+    li {
+      text-align: center;
+      border-top: 1px solid darken(#fff, 25%);
+      background: darken($base_theme_color, 15%);
+      &:hover {
+        background: darken($base_theme_color, 25%);
+      }
+
+    }
+    li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2*$base_font_size;
+    }
+  }
+
+  li.on {
+    //background: red;
+  }
+
+}

@@ -1,0 +1,27 @@
+<!--导航-->
+<nav>
+  <ul class="clearfix" id="nav">
+    <li class="nli on">
+      <h3><a href="[!--news.url--]">首页</a></h3>
+    </li>
+    [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid=0 order by myorder,classid
+    asc",0,24,0}]
+    <?php $classurl=sys_ReturnBqClassname($bqr,9);?>
+    <li class="nli">
+      <h3><a href="<?= $classurl;?>"><?=$bqr[classname]?></a></h3>
+      <ul class="sub">
+        <?php
+        $sql=$empire->query("select classid,classname,classpath  from {$dbtbpre}enewsclass where bclassid='$bqr[classid]' order by myorder,classid
+        asc limit 10");
+        while($info=$empire->fetch($sql))
+        {
+        ?>
+        <li><a href="/<?=$info[classpath]?>"><?=$info[classname]?></a></li>
+        <?
+        }
+        ?>
+      </ul>
+    </li>
+    [/e:loop]
+  </ul>
+</nav>

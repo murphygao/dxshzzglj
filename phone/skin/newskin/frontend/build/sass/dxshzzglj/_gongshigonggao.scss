@@ -1,0 +1,58 @@
+@charset "utf-8";
+/*gong shi gong gao scss file*/
+.gongshigonggao {
+  width: 285px;
+  border: 1px solid $base_theme_color;
+  border-top: 4px solid $base_theme_color;
+  border-radius: 4px;
+  float: right;
+  overflow: hidden;
+  .box-hd {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid lighten($base_theme_color, 20%);
+    background: linear-gradient(#e1f3ff,#fff);
+    span.title {
+      font-size: 1.5*$base_font_size;
+      padding-left: 15px;
+      color: $base_theme_color;
+      //font-weight: bold;
+    }
+    a.more {
+      float: right;
+      text-decoration: none;
+      color: $base_theme_color;
+      font-size: 1.2*$base_font_size;
+      padding-right: 10px;
+    }
+  }
+
+  .box-bd {
+    height:340px;
+    padding: 15px 10px 15px 10px;
+    background: #fff;
+    ul li {
+      height: 31px;
+      line-height: 31px;
+      border-bottom: 1px dashed darken(#fff, 15%);
+    }
+    ul li a {
+      text-decoration: none;
+      display: inline-block;
+      width: 210px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #000;
+      font-size: 1.25*$base_font_size;
+    }
+    ul li span.time {
+      float: right;
+    }
+    ul li span.cat {
+      color:$base_theme_color;
+      padding-right:5px;
+    }
+  }
+}

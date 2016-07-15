@@ -1,0 +1,33 @@
+@charset "utf-8";
+/*search scss*/
+
+.zhan-nei-sou-suo {
+  //border: 1px solid $base_theme_color;
+  width: $base_width;
+  background-color: #fff;
+
+  .item-list {
+    padding: 20px 15px;
+
+    ul li {
+      margin-top:15px;
+      border-bottom: 1px dashed darken($base_bg, 35%);
+    }
+    ul li h4 {
+      font-size: 1.2*$base_font_size;
+      a {
+        text-decoration: none;
+        color: $base_font_color;
+        font-weight: bold;
+      }
+    }
+    ul li p {
+      font-size: 1.1*$base_font_size;
+      margin-top: 5px;
+    }
+  }
+}
+
+.result {
+  font-size: 1.1*$base_font_size;
+}

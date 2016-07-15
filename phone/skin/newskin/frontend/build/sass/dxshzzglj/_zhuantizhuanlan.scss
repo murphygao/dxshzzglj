@@ -1,0 +1,70 @@
+/*zhuan ti zhuan lan  scss file */
+
+.zhuantizhuanlan {
+  width: 1000px;
+  height: 70px;
+  background: #fff;
+  padding: 15px 10px;
+
+  .title {
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    //padding: 5px;
+    font-size: $base_font_size*1.5;
+    color: $base_theme_color;
+    overflow: hidden;
+    a{
+      text-decoration: none;
+      color: $base_theme_color;
+    }
+    .fa {
+      margin-right: 5px;
+    }
+  }
+
+  #zhuantizhuanlan {
+    float: left;
+    width: 870px;
+    overflow: hidden;
+  }
+
+  .item a img {
+    height: 40px;
+  }
+
+  .owl-stage-outer {
+    width: 830px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .owl-nav .owl-prev {
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 5px;
+    //width: 20px;
+    height: 40px;
+    line-height: 40px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: $base_font_size*2.5;
+    //content: url(../../../dist/images/logo.png);
+  }
+
+  .owl-nav .owl-next {
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 5px;
+    //width: 20px;
+    height: 40px;
+    line-height: 40px;
+    right: 0;
+    top: 50%;
+    font-size: $base_font_size*2.5;
+    transform: translateY(-50%);
+  }
+}

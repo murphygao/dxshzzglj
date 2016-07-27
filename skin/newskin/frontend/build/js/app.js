@@ -204,5 +204,10 @@ $(document).ready(function () {
     oTable.column(7).search(selectedValue,0,0).draw();
   });
 
+
+
+
+
+
 });
 

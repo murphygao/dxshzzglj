@@ -155,11 +155,7 @@ $(document).ready(function () {
 
   var oTable=$('#example').DataTable({
     "serverSide": true,
-    "processing": true,
-    "ajax": {
-      "url": "http://dxsh.gov.cn/api/xingzhengxuke-chengli/ajax.php",
-      "dataType": "jsonp"
-    },
+    "ajax": "/api/xingzhengxuke-chengli/ajax.php",
     "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
     "pageLength": 5,
     "columnDefs": [

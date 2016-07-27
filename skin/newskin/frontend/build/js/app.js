@@ -48,7 +48,7 @@ $(document).ready(function () {
   $('header').vegas({
     timer: false,
     //cover: true,
-    transition: ['burn', 'zoomOut', 'swirlLeft'],
+    transition: 'random',
     slides: [
       {src: '/skin/newskin/frontend/dist/images/h01.jpg'},
       {src: '/skin/newskin/frontend/dist/images/h02.jpg'},

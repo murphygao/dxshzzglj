@@ -153,7 +153,7 @@ $(document).ready(function () {
 
 
 
-  var oTable=$('#example').DataTable({
+  var oTable=$('#example-v1').DataTable({
     "serverSide": true,
     "ajax": "/api/xingzhengxuke-chengli/ajax.php",
     "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],

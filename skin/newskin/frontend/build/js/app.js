@@ -165,10 +165,20 @@ $(document).ready(function () {
         "targets": [ 0 ],
         "visible": false,
       },
+
+      {
+        "targets": [ 1 ],
+        "visible": false,
+      },
+
       {
         "targets": [ 7 ],
         "visible": false,
       },
+
+
+
+
     ],
     "language": {
       "processing": "处理中...",

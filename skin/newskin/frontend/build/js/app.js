@@ -158,6 +158,7 @@ $(document).ready(function () {
     "ajax": "/api/xingzhengxuke-chengli/ajax.php",
     "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
     "bLengthChange" : false,
+    "searching":false,
     "pageLength": 5,
     "columnDefs": [
       {

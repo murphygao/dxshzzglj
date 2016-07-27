@@ -162,6 +162,10 @@ $(document).ready(function () {
     "pageLength": 5,
     "columnDefs": [
       {
+        "targets": [ 0 ],
+        "visible": false,
+      },
+      {
         "targets": [ 7 ],
         "visible": false,
       },

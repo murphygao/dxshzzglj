@@ -129,7 +129,7 @@ gulp.task('fileinclude', ['cleanDistPagesDir'], function () {
     }))
     .pipe(plugins.replace('{{theme}}', theme))
     // minified html
-    .pipe(plugins.htmlmin({collapseWhitespace: true}))
+    //.pipe(plugins.htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(paths.distPagegsDir))
     .pipe(plugins.size({title: 'fileinclude'}));
 });

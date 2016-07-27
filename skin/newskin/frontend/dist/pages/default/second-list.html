@@ -1,6 +1,297 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"><!--animate.css--><link rel="stylesheet" href="/skin/newskin/frontend/dist/plugins/animatecss/animate.min.css"><!-- owl carousel --><link rel="stylesheet" href="/skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css"><link rel="stylesheet" href="/node_modules/vegas/dist/vegas.min.css"><link rel="stylesheet" href="/skin/newskin/frontend/dist/css/default/app.css"><head><body><!--topbar--><div class="topbar"><div class="main clearfix"><div class="left">定西社会组织欢迎您 !</div><div class="right"><a href="javascript:void(0);">手机版</a> | <a href="javascript:void(0);" onclick="SetHome(this,window.location)">设为首页</a> | <a href="javascript:void(0);" onclick="shoucang(window.location,document.title)">加入收藏</a></div><div class="mid"><form name="searchform" method="post" action="/e/search/index.php" target="_blank">站内搜索 : <input type="search" name="keyboard" size="28"><select name="show" style="display: none"><option value="title">标题</option></select><button type="submit" style="border: none;background: transparent"><i class="fa fa-search"></i></button></form></div></div></div><header><div class="main"><div class="logo"></div><div class="left"><h1>定西社会组织</h1><p>DXSH.GOV.CN</p></div><div class="right"><div class="item"><a href="#" class="active">综合</a><a href="#">办事事项</a><a href="#">政策解读</a><a href="#">下载</a></div><!--      <div class="search">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+  <!--animate.css-->
+  <link rel="stylesheet" href="/skin/newskin/frontend/dist/plugins/animatecss/animate.min.css">
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="/skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/assets/owl.carousel.css">
+
+  <link rel="stylesheet" href="/node_modules/vegas/dist/vegas.min.css">
+
+  <link rel="stylesheet" href="/node_modules/datatables.net-dt/css/jquery.dataTables.css"/>
+
+  <link rel="stylesheet" href="/skin/newskin/frontend/dist/css/default/app.css">
+<head>
+<body>
+
+
+<!--topbar-->
+<div class="topbar">
+  <div class="main clearfix">
+    <div class="left">定西社会组织欢迎您 !</div>
+    <div class="right">
+      <a href="javascript:void(0);">手机版</a> |
+      <a href="javascript:void(0);" onclick="SetHome(this,window.location)">设为首页</a> |
+      <a href="javascript:void(0);" onclick="shoucang(window.location,document.title)">加入收藏</a>
+
+    </div>
+
+    <div class="mid">
+      <form name="searchform" method="post" action="/e/search/index.php" target="_blank">
+        站内搜索 : <input type="search" name="keyboard" size="28">
+        <select name="show" style="display: none">
+          <option value="title">标题</option>
+        </select>
+        <button type="submit" style="border: none;background: transparent"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="main">
+    <div class="logo"></div>
+    <div class="left">
+      <h1>
+        定西社会组织
+      </h1>
+
+      <p>
+        DXSH.GOV.CN
+      </p>
+    </div>
+
+    <div class="right">
+      <div class="item">
+        <a href="#" class="active">综合</a><a href="#">办事事项</a><a href="#">政策解读</a><a href="#">下载</a>
+      </div>
+<!--      <div class="search">
         <form action="">
           <input type="search" name="search" placeholder="输入关键字进行搜索">
           <input type="submit" value="搜索">
         </form>
-      </div>--></div></div></header><!--导航--><nav><ul class="clearfix" id="nav"><li class="nli on"><h3><a href="#">首页</a></h3></li><li class="nli"><h3><a href="#">新闻中心</a></h3><ul class="sub"><li><a href="#">政务新闻</a></li><li><a href="#">社会关注</a></li><li><a href="#">社会组织动态</a></li><li><a href="#">理论观点</a></li><li><a href="#">社会组织风采</a></li></ul></li><li class="nli"><h3><a href="#">信息公开</a></h3><ul class="sub"><li><a href="#">机构设置及职能</a></li><li><a href="#">行政许可</a></li><li><a href="#">查出公告</a></li><li><a href="#">评估结果</a></li><li><a href="#">年检结果</a></li></ul></li><li class="nli"><h3><a href="#">区县动态</a></h3></li><li class="nli"><h3><a href="#">政策法规</a></h3></li><li class="nli"><h3><a href="#">政策解读</a></h3></li><li class="nli"><h3><a href="#">网上办事大厅</a></h3></li><li class="nli"><h3><a href="#">问卷调查</a></h3></li></ul></nav><!--最新动态--><div class="wrap" style="margin-top: 0"><div class="topnews clearfix"><div class="left clearfix" id="latest-news"><span class=""><i class="fa fa-hand-o-right fa-padding-right-5"></i>最新动态 :</span><ul><li><a href="#">定西人大常务委员会关于市县两[2016-05-12]</a></li><li><a href="#">领导看望两会报道领导看望两会报道领导看望两会报道[2016-05-12]</a></li><li><a href="#">定西市人大常委副主任[2016-05-12]</a></li><li><a href="#">领导看望两会报道领导看望两会报道领导看望两会报道[2016-05-12]</a></li><li><a href="#">定西市人大常委副主任[2016-05-12]</a></li><li><a href="#">领导看望两会报道领导看望两会报道领导看望两会报道[2016-05-12]</a></li><li><a href="#">定西市人大常委副主任[2016-05-12]</a></li></ul></div></div></div><!--breadcrumbs--><div class="wrap margin-top-15"><ol class="breadcrumb"><li><a href="#">首页</a></li><li class="active">新闻中心</li></ol></div><div class="wrap margin-top-15"><div class="second-list clearfix"><div class="list-left"><ul class="menu"><li><a href="#">政务新闻</a></li><li><a href="#">社会关注</a></li><li><a href="#">社会组织管理</a></li><li><a href="#">理论观点</a></li><li><a href="#">社会组织风采</a></li></ul><ul class="others margin-top-15"><div class="title">热点排行</div><li><a href="#"><i>1</i>政务新闻政务新闻政务新闻政务新闻政务新闻政务新闻</a></li><li><a href="#"><i>2</i>社会关注社会关注社会关注社会关注</a></li><li><a href="#"><i>3</i>社会组织管理社会组织管理社会组织管理社会组织管理</a></li><li><a href="#"><i>4</i>理论观点理论观点理论观点理论观点</a></li><li><a href="#"><i>5</i>社会组织风采社会组织风采社会组织风采社会组织风采</a></li></ul></div><div class="list-right"><div class="section-a"><div class="cat-title"><span><i class="fa fa-chevron-down"></i>新闻中心</span></div></div><div class="section-a"><div class="list-right-box"><div class="box-hd"><span><i class="fa fa-star"></i>政务新闻</span><a href="#">更多 <i class="fa fa-angle-double-right"></i></a></div><div class="box-bd"><ul><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li></ul></div></div></div><div class="section-a"><div class="list-right-box"><div class="box-hd"><span><i class="fa fa-star"></i>社会关注</span><a href="#">更多 <i class="fa fa-angle-double-right"></i></a></div><div class="box-bd"><ul><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li></ul></div></div></div><div class="section-a"><div class="list-right-box"><div class="box-hd"><span><i class="fa fa-star"></i>社会组织管理</span><a href="#">更多 <i class="fa fa-angle-double-right"></i></a></div><div class="box-bd"><ul><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li><li><a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a> <span>[2016-05-12]</span></li></ul></div></div></div></div></div></div><footer><div class="container"><ul class="list-unstyled links"><li><a href="/">首页</a></li><li><a href="#">关于我们</a></li><li><a href="#">联系我们</a></li><li><a href="#">网站声明</a></li></ul><p>定西市民间组织管理局</p><p>ICP备案序号 : 陇ICP备88888888号 陇公安网备案 : 88888888</p></div></footer><!--jquery--><script src="/node_modules/jquery/dist/jquery.min.js"></script><script src="/skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/owl.carousel.min.js"></script><script src="/skin/newskin/frontend/dist/plugins/jquery.SuperSlider/jquery.SuperSlide.2.1.1.js"></script><script src="/node_modules/vegas/dist/vegas.min.js"></script><script src="/skin/newskin/frontend/dist/js/app.js"></script></body></head></head></html>
+      </div>-->
+    </div>
+  </div>
+</header>
+
+
+
+
+
+<!--导航-->
+<nav>
+  <ul class="clearfix" id="nav">
+    <li class="nli on">
+      <h3><a href="#">首页</a></h3>
+    </li>
+    <li class="nli">
+      <h3><a href="#">新闻中心</a></h3>
+      <ul class="sub">
+        <li><a href="#">政务新闻</a></li>
+        <li><a href="#">社会关注</a></li>
+        <li><a href="#">社会组织动态</a></li>
+        <li><a href="#">理论观点</a></li>
+        <li><a href="#">社会组织风采</a></li>
+      </ul>
+    </li>
+    <li class="nli">
+      <h3><a href="#">信息公开</a></h3>
+      <ul class="sub">
+        <li><a href="#">机构设置及职能</a></li>
+        <li><a href="#">行政许可</a></li>
+        <li><a href="#">查出公告</a></li>
+        <li><a href="#">评估结果</a></li>
+        <li><a href="#">年检结果</a></li>
+
+      </ul>
+    </li>
+    <li class="nli">
+      <h3><a href="#">区县动态</a></h3>
+    </li>
+    <li class="nli">
+      <h3><a href="#">政策法规</a></h3>
+    </li>
+    <li class="nli">
+      <h3><a href="#">政策解读</a></h3>
+    </li>
+    <li class="nli">
+      <h3><a href="#">网上办事大厅</a></h3>
+    </li>
+    <li class="nli">
+      <h3><a href="#">问卷调查</a></h3>
+    </li>
+  </ul>
+</nav>
+
+<!--最新动态-->
+<div class="wrap" style="margin-top: 0;">
+  <div class="topnews clearfix">
+    <div class="left clearfix" id="latest-news">
+      <span class=""><i class="fa fa-hand-o-right fa-padding-right-5"></i>最新动态 : </span>
+      <ul>
+        <li><a href="#">定西人大常务委员会关于市县两[2016-05-12]</a></li>
+        <li><a href="#">领导看望两会报道领导看望两会报道领导看望两会报道[2016-05-12]</a></li>
+        <li><a href="#">定西市人大常委副主任[2016-05-12]</a></li>
+        <li><a href="#">领导看望两会报道领导看望两会报道领导看望两会报道[2016-05-12]</a></li>
+        <li><a href="#">定西市人大常委副主任[2016-05-12]</a></li>
+        <li><a href="#">领导看望两会报道领导看望两会报道领导看望两会报道[2016-05-12]</a></li>
+        <li><a href="#">定西市人大常委副主任[2016-05-12]</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--breadcrumbs-->
+<div class="wrap margin-top-15">
+  <ol class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">新闻中心</li>
+  </ol>
+</div>
+
+<div class="wrap margin-top-15">
+  <div class="second-list clearfix">
+    <div class="list-left">
+      <ul class="menu">
+        <li><a href="#">政务新闻</a></li>
+        <li><a href="#">社会关注</a></li>
+        <li><a href="#">社会组织管理</a></li>
+        <li><a href="#">理论观点</a></li>
+        <li><a href="#">社会组织风采</a></li>
+      </ul>
+
+      <ul class="others margin-top-15">
+        <div class="title">热点排行</div>
+        <li><a href="#"><i>1</i>政务新闻政务新闻政务新闻政务新闻政务新闻政务新闻</a></li>
+        <li><a href="#"><i>2</i>社会关注社会关注社会关注社会关注</a></li>
+        <li><a href="#"><i>3</i>社会组织管理社会组织管理社会组织管理社会组织管理</a></li>
+        <li><a href="#"><i>4</i>理论观点理论观点理论观点理论观点</a></li>
+        <li><a href="#"><i>5</i>社会组织风采社会组织风采社会组织风采社会组织风采</a></li>
+      </ul>
+    </div>
+
+    <div class="list-right">
+      <div class="section-a">
+        <div class="cat-title">
+          <span><i class="fa fa-chevron-down"></i>新闻中心</span>
+        </div>
+      </div>
+      <div class="section-a">
+        <div class="list-right-box">
+          <div class="box-hd">
+            <span><i class="fa fa-star"></i>政务新闻</span><a href="#">更多 <i class="fa fa-angle-double-right"></i></a>
+          </div>
+          <div class="box-bd">
+            <ul>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section-a">
+        <div class="list-right-box">
+          <div class="box-hd">
+            <span><i class="fa fa-star"></i>社会关注</span><a href="#">更多 <i class="fa fa-angle-double-right"></i></a>
+          </div>
+          <div class="box-bd">
+            <ul>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section-a">
+        <div class="list-right-box">
+          <div class="box-hd">
+            <span><i class="fa fa-star"></i>社会组织管理</span><a href="#">更多 <i class="fa fa-angle-double-right"></i></a>
+          </div>
+          <div class="box-bd">
+            <ul>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+              <li>
+                <a href="#">定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作定西市社会组织管理局开展年底审核工作</a>
+                <span>[2016-05-12]</span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+    <div class="container">
+        <ul class="list-unstyled links">
+            <li><a href="/">首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">网站声明</a></li>
+        </ul>
+        <p>定西市民间组织管理局</p>
+
+        <p>ICP备案序号 : 陇ICP备88888888号 陇公安网备案 : 88888888</p>
+    </div>
+</footer>
+
+<!--jquery-->
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/owl.carousel.min.js"></script>
+<script src="/skin/newskin/frontend/dist/plugins/jquery.SuperSlider/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/node_modules/vegas/dist/vegas.min.js"></script>
+<script src="/node_modules/datatables.net/js/jquery.dataTables.js"></script>
+<script src="/skin/newskin/frontend/dist/js/app.js"></script>
+
+</body>
+</html>
+

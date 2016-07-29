@@ -6,7 +6,6 @@
   overflow: hidden;
   float: left;
   box-shadow: 1px 1px 1px #888888;
-  //border-left: 1px solid red;
   .box-hd {
     background: #fff;
     height: 35px;
@@ -15,7 +14,7 @@
     span.title {
       font-size: 1.4*$base_font_size;
       color: $base_theme_color;
-      margin-left: 20px;
+      margin-left: 10px;
     }
     span i.fa {
       padding-right: 5px;

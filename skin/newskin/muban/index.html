@@ -22,7 +22,8 @@
   <!--vegas.css-->
   <link rel="stylesheet" href="[!--news.url--]node_modules/vegas/dist/vegas.min.css">
 
-  <link rel="stylesheet" href="[!--news.url--]node_modules/datatables.net-dt/css/jquery.dataTables.css"/>
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <!--app.css-->
   <link rel="stylesheet" href="[!--news.url--]skin/newskin/frontend/dist/css/default/app.css">
@@ -48,9 +49,10 @@
     <div class="left clearfix" id="latest-news">
       <span class=""><i class="fa fa-hand-o-right fa-padding-right-5"></i>最新动态 : </span>
       <ul>
-        [e:loop={0,8,3,0}]
-        <li><a href="<?=$bqsr['titleurl']?>" target="_blank"><?= $bqr[title]?>[<?=date('Y-m-d',$bqr[newstime])?>]</a>
-        </li>
+        [e:loop={'27,29',15,0,0}]
+        <li><a href="<?=$bqsr['titleurl']?>" target="_blank">
+          <?= $bqr[title]?>[<?=date('Y-m-d',$bqr[newstime])?>]
+        </a></li>
         [/e:loop]
       </ul>
     </div>
@@ -90,12 +92,15 @@
           </a>
           </li>
           <?php
-           }
+           }else{
            ?>
           <li>
             <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
             <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
+           <?php
+           }
+           ?>
           [/e:loop]
         </ul>
       </div>
@@ -125,93 +130,74 @@
 
 <div class="wrap clearfix margin-top-15">
   <div class="left clearfix" style="float: left;width:700px;">
-    <div class="banshifuwu">
+
+    <!--行政许可-->
+    <div class="box-a">
       <div class="box-hd">
-        <span class="title"><i class="fa fa-chevron-down"></i>信息公开</span>
+        <span class="title"><i class="fa fa-tags"></i>行政许可公告</span>
+        <a href="[!--news.url--]html/xingzhengxuke-chengli.php" class="more">查询更多<i class="fa fa-angle-double-right"></i></a>
       </div>
-      <div class="box-bd">
-        <div class="box-a clearfix">
-          <div class="hd">
-            <ul>
-              <!--行政许可-->
-              <li class="menu menu-a"><span><?=$class_r[44]['classname']?></span></li>
-              <!-- 年检结果-->
-              <li class="menu menu-b"><span>年检结果</span></li>
-              <!--查出公告-->
-              <li class="menu menu-c"><span><?=$class_r[49]['classname']?></span></li>
-            </ul>
-          </div>
-          <div class="bd">
-
-            <!--行政许可-->
-            <div id="container">
-              <table border="0" cellpadding="4" cellspacing="0" class="table table-striped table-bordered"
-                     id="d1">
-                <thead>
-                <tr>
-                  <th>序号</th>
-                  <th>组织机构名称</th>
-                  <th>	统一社会信用代码</th>
-                  <th>住所</th>
-                  <th>业务主管单位</th>
-                  <th>法定代表人</th>
-                  <th>批准时间</th>
-                  <th>类别</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>loading...</td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!--年检结果-->
-            <ul>
-              [e:loop={'select * from [!db.pre!]ecms_xinxigongkai3 where classid=50 order by newstime DESC
-              limit 10',20,24,0}]
-              <li><a href="javascript:void(0);" target="_blank"><i class="fa fa-angle-right"></i>
-                <?= trim(esub($bqr[title],16,'...'))?>
-                <span style="color:red;padding-left: 2px;font-size: 12px;"><?=$bqr['pici']?>年</span>
-                <span style="color:red;padding-left: 2px;font-size: 12px;"><?=$bqr['jieguo']?></span>
-              </a></li>
-              [/e:loop]
-              <div class="more"><a href="[!--news.url--]html/nianjianjieguo.php" target="_blank">查询 <i
-                class="fa fa-angle-double-right"></i></a></div>
-            </ul>
-
-            <!--查出公告-->
-            <ul>
-              [e:loop={49,10,0,0}]
-              <li><a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-right"></i><?=$bqr[title]?></a>
-              </li>
-              [/e:loop]
-              <div class="more"><a href="[!--news.url--]e/public/ClassUrl/?classid=49" target="_blank">更多 <i
-                class="fa fa-angle-double-right"></i></a></div>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!--社会组织党建-->
-    <div class="chaxunfuwu">
-      <div class="box-hd">
-        <span class="title"><i class="fa fa-chevron-down"></i>
-          <?=$class_r[37]['classname']?></span><a href="[!--news.url--]e/public/ClassUrl/?classid=37" class="more"
-                                                  target="_blank">更多 <i
-        class="fa fa-angle-double-right"></i></a>
-      </div>
-      <div class="box-bd clearfix">
+      <div class="box-bd"  id="xzxk" style="height: 166px;">
+        <table class="table table-striped table-condensed table-no-bottom-margin">
+          <thead>
+          <tr>
+            <th width="33%">社会组织名称</th>
+            <th width="33%">许可事项</th>
+            <th>结果</th>
+          </tr>
+          </thead>
+        </table>
         <ul>
-          [e:loop={37,6,0,0}]
-          <li>
-            <a href="<?=$bqsr[titleurl]?>" target="_blank"><i class="fa fa-angle-double-right"></i><?=$bqr[title]?></a>
-          </li>
+          [e:loop={'select * from [!db.pre!]ecms_xinxigongkai order by newstime DESC limit
+          15',20,24,0}]
+          <table class="table table-striped table-condensed table-no-bottom-margin">
+            <tbody>
+            <tr>
+              <td width="33%"><?=esub($bqr[title],26,'...')?></td>
+              <td width="33%"><?=$bqr[classid]==45?'成立公告':'注销公告'?></td>
+              <td>准予</td>
+            </tr>
+            </tbody>
+          </table>
           [/e:loop]
         </ul>
+      </div>
+    </div>
+    <div class="box-a margin-top-15">
+      <div class="box-hd">
+        <span class="title"><i class="fa fa fa-tags"></i>年检结果公告</span>
+        <a href="[!--news.url--]html/nianjianjieguo.php" class="more">查询更多<i class="fa fa-angle-double-right"></i></a>
+      </div>
+      <div class="box-bd"  id="njjg" style="height: 166px;">
+        <table class="table table-striped table-condensed table-no-bottom-margin">
+          <thead>
+          <tr>
+            <th width="33%">社会组织名称</th>
+            <th width="33%">年度</th>
+            <th>年检结果</th>
+          </tr>
+          </thead>
+        </table>
+        <ul>
+          [e:loop={'select * from [!db.pre!]ecms_xinxigongkai3 where classid=50 order by newstime DESC limit
+          15',20,24,0}]
+          <table class="table table-striped table-condensed table-no-bottom-margin">
+            <tbody>
+            <tr>
+              <td width="33%"><?=esub($bqr[title],26,'...')?></td>
+              <td width="33%"><?=$bqr[pici]?></td>
+              <td><?= $bqr[jieguo]?></td>
+            </tr>
+            </tbody>
+          </table>
+          [/e:loop]
+        </ul>
+      </div>
+    </div>
+    <div class="box-a margin-top-15">
+      <div class="box-hd">
+        <span class="title"><i class="fa fa-circle-thin"></i>查处公告</span>
+        <a href="[!--news.url--]e/action/ListInfo/?classid=49" class="more"> 更多<i class="fa fa-angle-double-right"></i></a>
       </div>
     </div>
 
@@ -247,7 +233,7 @@
       </div>
       <div class="box-bd">
         <ul>
-          [e:loop={29,10,0,0}]
+          [e:loop={29,8,0,0}]
           <li>
             <a href="<?=$bqsr[titleurl]?>" target="_blank"><span class="cat">[公告]</span><?=$bqr[title]?></a>
             <span class="time">[<?=date('m-d',$bqr[newstime])?>]</span>
@@ -343,7 +329,6 @@
 <script src="[!--news.url--]skin/newskin/frontend/dist/plugins/owl.carousel.2.0.0/owl.carousel.min.js"></script>
 <script src="[!--news.url--]skin/newskin/frontend/dist/plugins/jquery.SuperSlider/jquery.SuperSlide.2.1.1.js"></script>
 <script src="[!--news.url--]node_modules/vegas/dist/vegas.min.js"></script>
-<script src="[!--news.url--]node_modules/datatables.net/js/jquery.dataTables.js"></script>
 <script src="[!--news.url--]skin/newskin/frontend/dist/js/app.js"></script>
 </body>
 </html>

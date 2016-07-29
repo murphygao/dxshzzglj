@@ -37,7 +37,8 @@ body {
 .section-one {
   //margin-top: 15px;
   padding: 15px;
-  border: 1px solid $base_theme_color;
+  //border: 1px solid $base_theme_color;
+  box-shadow: 1px 1px 1px #888888;
   background: #fff;
 }
 
@@ -63,5 +64,32 @@ body {
 
 .fa-padding-right-5{
   padding-right:5px;
+}
+
+
+// datatables
+table.dataTable thead .sorting_asc:after {
+  content: "";
+}
+
+table.dataTable thead .sorting:after {
+  opacity: 0.2;
+  content: "";
+}
+
+.table-no-bottom-margin{
+  margin-bottom: 0;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle;
+  text-align: center;
+}
+.table >thead > tr >th{
+  text-align: center;
+}
+
+.btn-react{
+  border-radius: 0;
 }
 

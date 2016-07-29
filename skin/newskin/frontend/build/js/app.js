@@ -102,7 +102,7 @@ $(document).ready(function () {
   // 专题专栏
   $("#zhuantizhuanlan").owlCarousel({
     loop: true,
-    margin: 15,
+    margin: 5,
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
@@ -152,73 +152,24 @@ $(document).ready(function () {
   $("#top_btn").click(function(){if(scroll=="off") return;$("html,body").animate({scrollTop: 0}, 600);});
 
 
-
-  var oTable=$('#d1').DataTable({
-    "serverSide": true,
-    "ajax": "/api/xingzhengxuke-chengli/ajax.php",
-    "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
-    "bLengthChange" : false,
-    "searching":false,
-    "pageLength": 5,
-    "columnDefs": [
-      {
-        "targets": [ 0 ],
-        "visible": false,
-      },
-
-      {
-        "targets": [ 1 ],
-        "visible": false,
-      },
-
-      {
-        "targets": [ 7 ],
-        "visible": false,
-      },
-
-
-
-
-    ],
-    "language": {
-      "processing": "处理中...",
-      "lengthMenu": "显示 _MENU_ 项结果",
-      "zeroRecords": "没有匹配结果",
-      "info": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
-      "infoEmpty": "显示第 0 至 0 项结果，共 0 项",
-      "infoFiltered": "(由 _MAX_ 项结果过滤)",
-      "infoPostFix": "",
-      "search": "搜索:",
-      "searchPlaceholder": "搜索...",
-      "url": "",
-      "emptyTable": "表中数据为空",
-      "loadingRecords": "载入中...",
-      "infoThousands": ",",
-      "paginate": {
-        "first": "首页",
-        "previous": "上页",
-        "next": "下页",
-        "last": "末页"
-      },
-      "aria": {
-        paginate: {
-          first: '首页',
-          previous: '上页',
-          next: '下页',
-          last: '末页'
-        },
-        "sortAscending": ": 以升序排列此列",
-        "sortDescending": ": 以降序排列此列"
-      },
-      "decimal": "-",
-      "thousands": "."
-    },
+  $("#xzxk").slide({
+    mainCell: "ul",
+    autoPlay: true,
+    effect: "topMarquee",
+    vis: 4,
+    interTime: 50,
+    trigger: "click"
   });
 
-  $('#mySelect').on('change',function(){
-    var selectedValue = $(this).val();
-    oTable.column(7).search(selectedValue,0,0).draw();
+  $("#njjg").slide({
+    mainCell: "ul",
+    autoPlay: true,
+    effect: "topMarquee",
+    vis: 4,
+    interTime: 50,
+    trigger: "click"
   });
+
 
 
 

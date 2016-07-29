@@ -5,13 +5,14 @@
   height: 70px;
   background: #fff;
   padding: 15px 10px;
+  box-shadow: 1px 1px 1px #888888;
 
   .title {
     float: left;
     width: 100px;
     height: 40px;
     line-height: 40px;
-    margin-right: 10px;
+    //margin-right: 10px;
     //padding: 5px;
     font-size: $base_font_size*1.5;
     color: $base_theme_color;
@@ -33,6 +34,7 @@
 
   .item a img {
     height: 40px;
+    width:180px;
   }
 
   .owl-stage-outer {

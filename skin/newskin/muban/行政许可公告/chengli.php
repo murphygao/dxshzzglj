@@ -103,9 +103,6 @@
   </div>
 </div>
 
-
-
-
 [!--temp.dxshzzglj-footer--]
 
 <!--[if (!IE)|(gt IE 8)]><!-->

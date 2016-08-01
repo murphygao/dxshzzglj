@@ -98,7 +98,7 @@
             <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
             <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
-           <?php
+          <?php
            }
            ?>
           [/e:loop]
@@ -169,7 +169,7 @@
         <a href="[!--news.url--]html/nianjianjieguo.php" class="more">更多<i class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="box-bd"  id="njjg" style="height: 166px;">
-        <table class="table table-striped table-condensed table-no-bottom-margin">
+        <table class="table table-condensed table-no-bottom-margin">
           <thead>
           <tr>
             <th width="33%">社会组织名称</th>
@@ -181,9 +181,13 @@
         <ul>
           [e:loop={'select * from [!db.pre!]ecms_xinxigongkai3 where classid=50 order by newstime DESC limit
           15',20,24,0}]
-          <table class="table table-striped table-condensed table-no-bottom-margin">
+          <table class="table table-condensed table-no-bottom-margin">
             <tbody>
-            <tr>
+            <?php if($bqno%2 == 0):?>
+            <tr style="background: #f9f9f9;">
+              <?php else:?>
+              <tr>
+              <?php endif;?>
               <td width="33%"><?=esub($bqr[title],26,'...')?></td>
               <td width="33%"><?=$bqr[pici]?></td>
               <td><?= $bqr[jieguo]?></td>

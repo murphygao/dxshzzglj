@@ -26,8 +26,8 @@
   <!--datatables-->
   <!--  <link rel="stylesheet" href="/node_modules/datatables.net-dt/css/jquery.dataTables.css"/>-->
 
-  <link rel="stylesheet" href="[!--news.url--]node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap4.min.css">
 
   <!--app.css-->
   <link rel="stylesheet" href="[!--news.url--]skin/newskin/frontend/dist/css/default/app.css">
@@ -78,16 +78,6 @@
           <div style="padding-bottom: 15px;">
             <span style="font-size: 16.8px;padding: 0 0 10px;color: #2399ff;">年检结果</span>
           </div>
-          <div class="" style="padding-bottom: 15px;">
-            <label>请选择类别
-              <select id="mySelect">
-                <option value="">请选择类别</option>
-                <option value="0">社会团体</option>
-                <option value="1">民办非企业单位</option>
-                <option value="2">基金会</option>
-              </select>
-            </label>
-          </div>
           <div id="container">
             <table border="0" cellpadding="4" cellspacing="0" class="table table-striped table-bordered" id="example">
               <thead>
@@ -128,6 +118,7 @@
 <script src="[!--news.url--]skin/newskin/frontend/dist/plugins/jquery.SuperSlider/jquery.SuperSlide.2.1.1.js"></script>
 <script src="[!--news.url--]node_modules/vegas/dist/vegas.min.js"></script>
 <script src="[!--news.url--]node_modules/datatables.net/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap4.min.js"></script>
 <script src="[!--news.url--]skin/newskin/frontend/dist/js/app.js"></script>
 
 <script type="text/javascript" charset="utf-8">
@@ -136,7 +127,8 @@
       "serverSide": true,
       "ajax": "/api/nianjianjieguo/ajax.php",
       "lengthMenu": [[2, 4, 8, -1], [2, 4, 8, "All"]],
-      "pageLength": 5,
+      "pageLength": 10,
+      "bLengthChange" : false,
       "columnDefs": [
         {
           "targets": [6],
@@ -177,6 +169,18 @@
         "thousands": "."
       },
     });
+
+    //添加选择类别菜单
+    var be=$('#container .row:first-child').children(':first');
+    var bs=$('<select/>',{
+      id:'mySelect',
+      class:'form-control input-sm'
+    });
+    bs.append('<option value="">请选择类别</option>');
+    bs.append('<option value="0">社会团体</option>');
+    bs.append('<option value="1">民办非企业单位</option>');
+    bs.append('<option value="2">基金会</option>');
+    bs.appendTo(be);
 
     $('#mySelect').on('change', function () {
       var selectedValue = $(this).val();

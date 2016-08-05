@@ -156,7 +156,7 @@
             <?php if($bqno%2 == 0):?>
             <tr style="background: #f9f9f9;">
               <?php else:?>
-              <tr>
+            <tr>
               <?php endif;?>
               <td width="33%"><?=esub($bqr[title],26,'...')?></td>
               <td width="33%"><?=$bqr[classid]==45?'成立公告':'注销公告'?></td>
@@ -204,7 +204,7 @@
       </div>
     </div>
     <div class="box-a margin-top-15">
-      <div class="box-hd">
+      <div class="box-hd box-hd-warning">
         <span class="title"><i class="fa fa-circle-thin"></i>查处公告</span>
         <a href="[!--news.url--]e/action/ListInfo/?classid=49" class="more"> 更多<i class="fa fa-angle-double-right"></i></a>
       </div>

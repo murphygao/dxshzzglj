@@ -35,3 +35,18 @@
     }
   }
 }
+
+.box-hd-warning{
+  background:url("../../images/warning-bg.jpg") repeat-x !important;
+  height: 29px !important;
+  line-height: 29px !important;
+  span.title{
+    margin-left: 20px !important;
+  }
+  span.title,.more{
+    color:#fff !important;
+  }
+  span i.fa {
+    padding-right: 15px !important;
+  }
+}

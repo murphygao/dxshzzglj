@@ -79,10 +79,10 @@
             <table border="0" cellpadding="4" cellspacing="0" class="table table-striped table-bordered" id="example">
               <thead>
               <tr>
-                <th>序号</th>
-                <th>组织机构名称</th>
-                <th>	统一社会信用代码</th>
-                <th>住所</th>
+                <th width="8%">序号</th>
+                <th width="17%">组织机构名称</th>
+                <th width="20%">	统一社会信用代码</th>
+                <th width="20%">住所</th>
                 <th>业务主管单位</th>
                 <th>法定代表人</th>
                 <th>批准时间</th>
@@ -178,9 +178,6 @@
     bs.append('<option value="1">民办非企业单位</option>');
     bs.append('<option value="2">基金会</option>');
     bs.appendTo(be);
-
-
-
 
     $('#mySelect').on('change',function(){
       var selectedValue = $(this).val();

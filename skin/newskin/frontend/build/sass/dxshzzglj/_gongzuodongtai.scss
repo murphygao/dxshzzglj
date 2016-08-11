@@ -45,7 +45,7 @@
           }
         }*/
     /*    ul > li:not(:first-child) {*/
-    ul > li:not(:first-child) {
+    ul > li{
       height: 32px;
       line-height: 32px;
       border-bottom: 1px dashed darken(#fff, 10%);

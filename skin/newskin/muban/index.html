@@ -82,26 +82,10 @@
       <div class="box-bd">
         <ul>
           [e:loop={0,6,3,0,'firsttitle=1','newstime DESC'}]
-
-          <?php
-           if($bqno== 1){
-          ?>
-          <li><a href="<?=$bqsr[titleurl]?>" target="_blank">
-            <h3><?=$bqr[title]?></h3>
-
-            <p><?=$bqr[smalltext]?></p>
-          </a>
-          </li>
-          <?php
-           }else{
-           ?>
           <li>
             <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
             <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
-          <?php
-           }
-           ?>
           [/e:loop]
         </ul>
       </div>
@@ -142,15 +126,15 @@
         <table class="table table-striped table-condensed table-no-bottom-margin">
           <thead>
           <tr>
-            <th width="33%">社会组织名称</th>
-            <th width="33%">许可事项</th>
-            <th>结果</th>
+            <th width="50%">社会组织名称</th>
+            <th width="25%">许可事项</th>
+            <th width="25%">结果</th>
           </tr>
           </thead>
         </table>
         <ul>
           [e:loop={'select * from [!db.pre!]ecms_xinxigongkai order by newstime DESC limit
-          15',20,24,0}]
+          100',20,24,0}]
           <table class="table table-condensed table-no-bottom-margin">
             <tbody>
             <?php if($bqno%2 == 0):?>
@@ -158,9 +142,9 @@
               <?php else:?>
             <tr>
               <?php endif;?>
-              <td width="33%"><?=esub($bqr[title],26,'...')?></td>
-              <td width="33%"><?=$bqr[classid]==45?'成立公告':'注销公告'?></td>
-              <td>准予</td>
+              <td width="50%"><?=esub($bqr[title],60,'...')?></td>
+              <td width="25%"><?=$bqr[classid]==45?'成立公告':'注销公告'?></td>
+              <td width="25%">准予</td>
             </tr>
             </tbody>
           </table>
@@ -177,15 +161,15 @@
         <table class="table table-condensed table-no-bottom-margin">
           <thead>
           <tr>
-            <th width="33%">社会组织名称</th>
-            <th width="33%">年度</th>
-            <th>年检结果</th>
+            <th width="50%">社会组织名称</th>
+            <th width="25%">年度</th>
+            <th width="25%">年检结果</th>
           </tr>
           </thead>
         </table>
         <ul>
           [e:loop={'select * from [!db.pre!]ecms_xinxigongkai3 where classid=50 order by newstime DESC limit
-          15',20,24,0}]
+          100',20,24,0}]
           <table class="table table-condensed table-no-bottom-margin">
             <tbody>
             <?php if($bqno%2 == 0):?>
@@ -193,9 +177,9 @@
               <?php else:?>
             <tr>
               <?php endif;?>
-              <td width="33%"><?=esub($bqr[title],26,'...')?></td>
-              <td width="33%"><?=$bqr[pici]?></td>
-              <td><?= $bqr[jieguo]?></td>
+              <td width="50%"><?=esub($bqr[title],26,'...')?></td>
+              <td width="25%"><?=$bqr[pici]?></td>
+              <td width="25%"><?= $bqr[jieguo]?></td>
             </tr>
             </tbody>
           </table>
@@ -280,27 +264,27 @@
         <span>友情链接</span>
       </div>
       <ul>
-        <li class="on"><a href="javascript:void (0);">国家民间社会组织网站<i class="fa fa-angle-down"></i></a></li>
-        <li><a href="javascript:void(0);">甘肃社会组织网站<i class="fa fa-angle-down"></i></a></li>
-        <li><a href="javascript:void(0);">其他网站<i class="fa fa-angle-down"></i></a></li>
+        <li class="on"><a href="javascript:void (0);">中央网站<i class="fa fa-angle-down"></i></a></li>
+        <li><a href="javascript:void(0);">省内网站<i class="fa fa-angle-down"></i></a></li>
+        <li><a href="javascript:void(0);">市内网站<i class="fa fa-angle-down"></i></a></li>
       </ul>
     </div>
     <div class="bd clearfix">
-      <!--国家民间社会组织网站-->
+      <!--中央网站-->
       <ul>
         [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=6 order by lid',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
         [/e:loop]
       </ul>
 
-      <!--甘肃社会组织网站-->
+      <!--省内网站-->
       <ul>
         [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=7 order by lid',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
         [/e:loop]
       </ul>
 
-      <!--其他网站-->
+      <!--市内网站-->
       <ul>
         [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=8 order by lid',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>

@@ -27,7 +27,7 @@
     a {
       text-decoration: none;
     }
-    ul > li:first-child {
+/*    ul > li:first-child {
       padding: 8px 0;
       margin-bottom: 11px;
       border-bottom: 1px solid darken(#fff, 25%);
@@ -43,8 +43,8 @@
         line-height: 20px;
         overflow: hidden;
       }
-    }
-    ul > li:not(:first-child) {
+    }*/
+    ul > li {
       height: 32px;
       line-height: 32px;
       border-bottom: 1px dashed darken(#fff, 10%);

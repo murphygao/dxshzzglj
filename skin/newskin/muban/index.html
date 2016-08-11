@@ -81,9 +81,9 @@
       </div>
       <div class="box-bd">
         <ul>
-          [e:loop={0,6,3,0,'firsttitle=1','newstime DESC'}]
+          [e:loop={0,8,3,0,'firsttitle=1','newstime DESC'}]
           <li>
-            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=$bqr[title]?></a>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><?=esub($bqr[title],46)?></a>
             <span>[<?=date('Y-m-d',$bqr[newstime])?>]</span>
           </li>
           [/e:loop]
@@ -230,7 +230,8 @@
         <ul>
           [e:loop={29,8,0,0}]
           <li>
-            <a href="<?=$bqsr[titleurl]?>" target="_blank"><span class="cat">[公告]</span><?=$bqr[title]?></a>
+            <a href="<?=$bqsr[titleurl]?>" target="_blank"><span class="cat">
+            </span><?=esub($bqr[title],34)?></a>
             <span class="time">[<?=date('m-d',$bqr[newstime])?>]</span>
           </li>
           [/e:loop]

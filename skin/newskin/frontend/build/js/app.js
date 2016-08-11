@@ -134,7 +134,7 @@ $(document).ready(function () {
 
 
   // sidebar
-  $("#leftsead a").hover(function(){
+/*  $("#leftsead a").hover(function(){
     if($(this).prop("className")=="youhui"){
       $(this).children("img.hides").show();
     }else{
@@ -149,7 +149,7 @@ $(document).ready(function () {
       $(this).children("img.hides").animate({marginRight:'-143px'},'slow',function(){$(this).hide();$(this).next("img.shows").show();});
     }
   });
-  $("#top_btn").click(function(){if(scroll=="off") return;$("html,body").animate({scrollTop: 0}, 600);});
+  $("#top_btn").click(function(){if(scroll=="off") return;$("html,body").animate({scrollTop: 0}, 600);});*/
 
 
   $("#xzxk").slide({
@@ -169,12 +169,6 @@ $(document).ready(function () {
     interTime: 50,
     trigger: "click"
   });
-
-
-
-
-
-
 
 });
 

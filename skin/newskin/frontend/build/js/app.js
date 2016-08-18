@@ -45,7 +45,7 @@ function shoucang(sTitle, sURL) {
 $(document).ready(function () {
 
   // 首页头部背景图切换
-  $('header').vegas({
+/*  $('header').vegas({
     timer: false,
     //cover: true,
     transition: 'random',
@@ -54,7 +54,7 @@ $(document).ready(function () {
       {src: '/skin/newskin/frontend/dist/images/h02.jpg'},
       {src: '/skin/newskin/frontend/dist/images/h03.jpg'}
     ]
-  });
+  });*/
 
   // 导航下拉
   $("#nav").slide({

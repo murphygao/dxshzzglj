@@ -6,7 +6,8 @@
   float: left;
   width: 100%;
   background: #fff;
-  box-shadow: 1px 1px 1px #888888;
+  //box-shadow: 1px 1px 1px #888888;
+  outline:1px solid #e5e5e5;
   .hd {
     height: $base_title_height;
     line-height: $base_title_height;

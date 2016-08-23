@@ -37,7 +37,7 @@
   <![endif]-->
 
   <!--goto mobile site-->
-  <script src="http://siteapp.baidu.com/static/webappservice/uaredirect.js" type="text/javascript"></script>
+  <!--<script src="http://siteapp.baidu.com/static/webappservice/uaredirect.js"></script>-->
   <!--<script type="text/javascript">uaredirect("/");</script>-->
 
 </head>

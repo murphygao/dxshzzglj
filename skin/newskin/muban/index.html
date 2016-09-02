@@ -177,7 +177,7 @@
               <?php else:?>
             <tr>
               <?php endif;?>
-              <td width="50%"><?=esub($bqr[title],26,'...')?></td>
+              <td width="50%"><?=esub($bqr[title],60,'...')?></td>
               <td width="25%"><?=$bqr[pici]?></td>
               <td width="25%"><?= $bqr[jieguo]?></td>
             </tr>
@@ -275,21 +275,21 @@
     <div class="bd clearfix">
       <!--中央网站-->
       <ul>
-        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=6 order by lid',20,24,0}]
+        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=6 order by myorder',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
         [/e:loop]
       </ul>
 
       <!--省内网站-->
       <ul>
-        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=7 order by lid',20,24,0}]
+        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=7 order by myorder',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
         [/e:loop]
       </ul>
 
       <!--市内网站-->
       <ul>
-        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=8 order by lid',20,24,0}]
+        [e:loop={'select * from [!db.pre!]enewslink where checked=1 and classid=8 order by myorder',20,24,0}]
         <li><a href="<?=$bqr[lurl]?>" target="_blank"><i class="fa fa-caret-right "></i><?=$bqr[lname]?></a></li>
         [/e:loop]
       </ul>

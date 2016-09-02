@@ -170,5 +170,10 @@ $(document).ready(function () {
     trigger: "click"
   });
 
+  $(".content-zhengwen p span").each(function(){
+    var $this=$(this);
+    $this.html($this.html().replace(/&nbsp;/g,''));
+  });
+
 });
 

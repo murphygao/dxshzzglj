@@ -1,0 +1,27 @@
+<!--topbar-->
+<div class="topbar">
+  <div class="main clearfix">
+    <div class="left"><?= $public_r[sitename]?>欢迎您 !</div>
+    <div class="right">
+      <a href="javascript:void(0);" onclick="SetHome(this,window.location)">设为首页</a> |
+      <a href="javascript:void(0);" onclick="shoucang(window.location,document.title)">加入收藏</a>
+
+    </div>
+
+    <div class="mid">
+      <form name="searchform" method="post" action="/e/search/index.php" target="_blank">
+        站内搜索 : <input type="search" name="keyboard" size="28">
+        <select name="show" style="display: none">
+          <option value="title">标题</option>
+        </select>
+        <button type="submit" style="border: none;background: transparent"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="main">
+    <embed src="/skin/newskin/frontend/dist/images/banner2.swf" type="" width="1000px" height="200px;">
+  </div>
+</header>
